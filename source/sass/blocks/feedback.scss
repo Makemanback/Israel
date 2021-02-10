@@ -1,0 +1,117 @@
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: $blue;
+  overflow-x: hidden;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/header-mask.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -855px -178px;
+  }
+}
+
+.feedback__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-top: 31px;
+  margin-bottom: 42px;
+  color: $white;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 80px;
+    margin-right: 75px;
+    margin-left: 75px;
+    margin-bottom: 103px;
+  }
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-end;
+    min-width: 1024px;
+    width: 100%;
+    max-width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-top: 89px;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 111px;
+
+    overflow: visible;
+  }
+
+  img {
+    display: none;
+
+    @media (min-width: $desktop-width) {
+      position: absolute;
+      display: block;
+      width: 511px;
+      height: 288px;
+      top: 72px;
+      left: -10px;
+    }
+  }
+}
+
+.feedback__wrapper {
+  @media (min-width: $desktop-width) {
+    position: relative;
+    background-color: $blue;
+    z-index: 3;
+  }
+}
+
+.feedback__container h3 {
+  margin: 0;
+  margin-bottom: 16px;
+
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 37px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 16px;
+    margin-left: -2px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 29px;
+    font-size: 36px;
+    line-height: 51px;
+  }
+}
+
+.feedback__container p {
+  margin: 0;
+  margin-bottom: 26px;
+
+  line-height: 22px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 54px;
+    margin-left: 3px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 252px;
+    margin-bottom: 47px;
+  }
+}
+
+.feedback__form {
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,23 @@
+.logo {
+  width: 38px;
+  height: 38px;
+  cursor: pointer;
+
+  svg {
+    width: 138px;
+    height: 38px;
+    margin-right: 16px;
+
+    transform: translateX(4px);
+
+    @media (min-width: $tablet-width) {
+      width: 202px;
+      height: 52px;
+      transform: none;
+    }
+  }
+
+  &:active {
+    opacity: 1;
+  }
+}
