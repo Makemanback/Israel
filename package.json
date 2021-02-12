@@ -10,11 +10,13 @@
     "ajv": "6.9.1",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.4.x",
+    "eslint": "7.19.0",
+    "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.x",
+    "gulp-avif": "0.1.0",
     "gulp-babel": "8.0.0",
     "gulp-csso": "3.0.1",
+    "gulp-fontgen": "0.2.5",
     "gulp-imagemin": "5.0.3",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
@@ -23,6 +25,8 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-svgstore": "7.0.1",
+    "gulp-ttf-to-woff": "1.0.3",
+    "gulp-ttftowoff2": "1.0.1",
     "gulp-webp": "4.0.1",
     "pixel-glass": "1.0.13",
     "posthtml-include": "1.2.0",
@@ -37,6 +41,7 @@
     "build": "gulp build",
     "start": "gulp start",
     "webp": "gulp webp",
+    "avif": "gulp avif",
     "sprite": "gulp sprite",
     "babel": "gulp babel"
   },
@@ -57,7 +62,8 @@
   },
   "dependencies": {
     "del": "4.1.1",
-    "inputmask": "5.0.5"
+    "inputmask": "5.0.5",
+    "swiper": "6.4.11"
   },
   "repository": {
     "type": "git",

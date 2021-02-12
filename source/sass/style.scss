@@ -1,11 +1,15 @@
 @import "fonts.scss";
 @import "normalize.scss";
-@import "common.scss";
 @import "mixins.scss";
+@import "common.scss";
 @import "variables.scss";
 @import "blocks/button.scss";
+@import "blocks/main.scss";
 @import "blocks/header.scss";
 @import "blocks/footer.scss";
 @import "blocks/logo.scss";
 @import "blocks/form.scss";
 @import "blocks/modal.scss";
+@import "blocks/about.scss";
+@import "blocks/programs.scss";
+@import "blocks/swiper-container.scss";

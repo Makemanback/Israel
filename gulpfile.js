@@ -2,6 +2,7 @@
 
 var gulp = require("gulp");
 var babel = require("gulp-babel");
+var gulpAvif = require("gulp-avif");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");
 var sass = require("gulp-sass");
@@ -16,6 +17,16 @@ var svgstore = require("gulp-svgstore")
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var del = require("del");
+const ttfToWoff = require("gulp-ttf-to-woff");
+const ttfToWoff2 = require("gulp-ttftowoff2");
+
+gulp.task("ttfToWoff", function () {
+  return gulp.src("source/**/*.ttf").pipe(ttfToWoff()).pipe(gulp.dest("source"));
+})
+
+gulp.task("ttfToWoff2", function () {
+  return gulp.src("source/**/*.ttf").pipe(ttfToWoff2()).pipe(gulp.dest("source"));
+})
 
 gulp.task("babel", function () {
   return gulp.src("source/js/index.js")
@@ -43,7 +54,7 @@ gulp.task("server", function () {
   server.init({
     server: "build/",
     notify: false,
-    open: true,
+    open: false,
     cors: true,
     ui: false
   });
@@ -73,11 +84,21 @@ gulp.task("images", function() {
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
-    .pipe(gulp.dest("source/img"));
+    .pipe(gulp.dest("source/img/webp"));
+});
+
+gulp.task("avif", function () {
+  // return gulp.src("source/img/about/photo_about-desk@2x.png")
+  return gulp.src("source/img/**/*.{png,jpg}")
+      .pipe(gulpAvif({
+        quality: 90,
+        speed: 8
+      }))
+      .pipe(gulp.dest("source/img/avif"));
 });
 
 gulp.task("sprite", function () {
-  return gulp.src("source/img/{icon-*,htmlacademy*}.svg")
+  return gulp.src("source/img/**/{icon-*,htmlacademy*}.svg")
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite_auto.svg"))
     .pipe(gulp.dest("build/img"));

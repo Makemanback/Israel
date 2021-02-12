@@ -9,11 +9,140 @@
 </head>
 <body>
   <header class="header">
-    <div class="header__container"></div>
+    <div class="header__container">
+      <div class="header__top-row">
+        <div class="header__logo">
+          <picture>
+            <!-- 240x84 -->
+            <source type="image/avif" srcset="img/avif/header/logo.avif 1x, img/avif/header/logo@2x.avif 2x">
+            <source type="image/webp" srcset="img/webp/header/logo.webp 1x, img/webp/header/logo@2x.webp 2x">
+            <!-- 120x42 -->
+            <img class="logo" alt="логотип Маса" width="120" height="42" src="img/header/logo.png" srcset="img/header/logo@2x.png 2x">
+          </picture>
+        </div>
+
+        <div class="header__contacts">
+          <a href="tel:+97226216581" class="header__phone">
+            + (972) 2 – 621 – 6581
+          </a>
+          <span class="header__order-call">
+            заказать звонок
+          </span>
+        </div>
+      </div>
+
+      <div class="header__bottom-row">
+        <h2>Учёба, путешествие и карьера для еврейской молодёжи</h2>
+        <div class="header__scroll-button-round">
+        <button class="header__scroll-button button">
+          <picture>
+            <!-- 34x52 -->
+            <source type="image/avif" srcset="img/avif/header/mouse.avif 1x, img/avif/header/mouse@2x.avif 2x">
+            <source type="image/webp" srcset="img/webp/header/mouse.webp 1x, img/webp/header/mouse@2x.webp 2x">
+            <!-- 17x26 -->
+            <img alt="мышка" width="17" height="26" src="img/header/mouse.png" srcset="img/header/mouse.png 2x">
+          </picture>
+        </button>
+      </div>
+      </div>
+    </div>
   </header>
 
   <main class="main">
+    <h1 class="visually-hidden">Учеба в Израиле</h1>
+    <section class="about">
+      <div class="about__container">
+        <h2>О программе</h2>
+        <p>«Маса» — совместный проект правительства Израиля и Еврейского агентства Сохнут. Более 250 учебных программ (60 на русском) и возможность стажировки в Израиле. В&nbsp;течение освоения программ предусмотрен грант от 4200 до 8400$.</p>
+        <div class="about__video">
+          <picture>
 
+            <!-- 1740х920 -->
+            <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/about/photo_about-desk.avif 1x, img/avif/about/photo_about-desk@2x.avif 2x">
+            <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/about/photo_about-desk.webp 1x, img/webp/about/photo_about-desk2x.webp 2x">
+            <!-- 640x448 -->
+            <source type="image/avif" srcset="img/avif/about/photo_about_mob.avif 1x, img/avif/about/photo_about_mob@2x.avif 2x">
+            <source type="image/webp" srcset="img/webp/about/photo_about_mob.webp 1x, img/webp/about/photo_about_mob2x.webp 2x">
+            <!-- 320x224 -->
+            <img width="320" height="224" class="about__picture" src="img/about/photo_about_mob.png" alt="парни жарят шашлык" srcset="img/about/photo_about_mob@2x.png 2x">
+          </picture>
+          <div class="about__play">
+            <button class="about__button button">
+              <svg class="about__image" width="15" height="19" aria-label="" ledby="play">
+                <title id="play">начать видео</title>
+                <use xlink:href="img/sprite_auto.svg#icon-play"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs">
+      <div class="programs__container">
+        <h2>Программы</h2>
+        <div class="programs__list">
+              <button class="programs__button button programs__common">Общие</button>
+              <button class="programs__button button programs__academic programs__button--active">Академические</button>
+              <button class="programs__button button programs__internship">Стажировки</button>
+              <button class="programs__button button programs__volunteer">Волонтёрство</button>
+              <button class="programs__button button programs__religion">Религиозные</button>
+        </div>
+
+        <ul class="programs__description">
+          <li class="programs__description-item visually-hidden">
+            <h3>Общие</h3>
+            <span>
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.
+            </span>
+            <span>
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+              изучить все этов удивительной университетской среде.
+            </span>
+          </li>
+          <li class="programs__description-item">
+            <h3>Академические</h3>
+            <span>
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.
+            </span>
+            <span>
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+              изучить все этов удивительной университетской среде.
+            </span>
+          </li>
+          <li class="programs__description-item visually-hidden">
+            <h3>Стажировки</h3>
+            <span>
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.
+            </span>
+            <span>
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+              изучить все этов удивительной университетской среде.
+            </span>
+          </li>
+          <li class="programs__description-item visually-hidden">
+            <h3>Волонтёрство</h3>
+            <span>
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.
+            </span>
+            <span>
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+              изучить все этов удивительной университетской среде.
+            </span>
+          </li>
+          <li class="programs__description-item visually-hidden">
+            <h3>Религиозные</h3>
+            <span>
+              Провести семестр или год за рубежом, знакомясь с различными культурами и идеями, традициями и стилем жизни — вот что такое учеба за границей! Израиль — это не только центр религиозного мира, это  также академический центр, живая лаборатория идей и творческого исследования.
+            </span>
+            <span>
+              Может быть, Вы заинтересованы в изучении социологии, мира, юриспруденции, биологии, сравнительной религии, законодательного и делового администрирования или искусства? Здесь, в Израиле, Вы сможете
+              изучить все этов удивительной университетской среде.
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -23,5 +152,6 @@
   </footer>
 
   <script src="js/index.js"></script>
+  <!-- <script type="module" src="js/slider.js"></script> -->
 </body>
 </html>

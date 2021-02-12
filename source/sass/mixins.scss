@@ -3,3 +3,20 @@
   padding: 0;
   list-style: none;
 }
+
+@mixin active-button {
+  border-radius: 60.6704px;
+  background: $yellow-gradient;
+  color: $white;
+  font-size: 16.1788px;
+  line-height: 19px;
+  font-variant: small-caps;
+}
+
+@mixin active-button-desk {
+  background: none;
+  border-radius: 0;
+  background-color: $white;
+  background-image: url("../img/programs/active.png");
+  background-size: 228px 68px;
+}

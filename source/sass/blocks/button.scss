@@ -1,14 +1,10 @@
 .button {
-  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
-  border-radius: 5px;
-  border-width: 1px;
-  border-style: solid;
-  color: $white;
-  text-transform: uppercase;
-  font-family: "Roboto Condensed", "Arial", sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 16px;
-  text-align: center;
+  border: none;
+  padding: 0;
+
+  cursor: pointer;
 }
