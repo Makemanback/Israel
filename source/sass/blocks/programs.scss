@@ -3,6 +3,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/programs/prog_bg_desk.png");
+    background-size: 680px 426px;
+    background-position: 686px 52px;
+    background-repeat: no-repeat;
+    padding-top: 100px;
+  }
 }
 
 .programs__container {
@@ -10,10 +18,16 @@
   overflow: hidden;
   grid-template-columns: 320px 320px 320px;
   grid-template-rows: 55px 80px auto;
+  background-image: url("../img/programs/prog_bg_mob.png");
+  background-size: 320px 201px;
+  background-position: 329px 117px;
+  background-repeat: no-repeat;
+
 
   @media (min-width: $desktop-width) {
-    grid-template-columns: 290px 560px;
-    grid-template-rows: 140px 342px auto;
+    grid-template-columns: 278px 112px 560px;
+    grid-template-rows: 120px 342px auto;
+    background-image: none;
   }
 
   h2 {
@@ -40,6 +54,7 @@
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     gap: 0;
+    margin-left: 2px;
   }
 }
 
@@ -76,15 +91,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     opacity: 0.7;
-
-    @media (min-width: $desktop-width) {
-      top: 15px;
-    }
   }
 
   @media (min-width: $desktop-width) {
     width: 228px;
-    height: 68px;
+    height: 64px;
+    padding-top: 15px;
   }
 }
 
@@ -104,10 +116,12 @@
   }
 
   @media (min-width: $desktop-width) {
+    @include active-button-desk;
+
+    height: 68px;
+    padding-top: 0;
     font-size: 16px;
     line-height: 19px;
-
-    @include active-button-desk;
   }
 }
 
@@ -117,6 +131,14 @@
   &::before {
     background-image: url("../img/programs/noun_582688_cc.png");
     background-size: 32.36px 31.46px;
+
+    @media (min-width: $desktop-width) {
+      background-size: 36px 35px;
+      width: 36px;
+      height: 35px;
+      top: 16px;
+      left: 20px;
+    }
   }
 
   &:hover {
@@ -141,9 +163,23 @@
 .programs__common {
   padding-left: 20px;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 73px;
+    text-align: left;
+    padding-top: 0;
+  }
+
   &::before {
     background-image: url("../img/programs/noun_1240873_cc.png");
     background-size: 24.89px 29.33px;
+
+    @media (min-width: $desktop-width) {
+      background-size: 28px 33px;
+      width: 28px;
+      height: 33px;
+      left: 24px;
+      top: 14px;
+    }
   }
 
   &:hover {
@@ -170,10 +206,22 @@
 .programs__internship {
   padding-left: 40px;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 10px;
+  }
+
   &::before {
     background-image: url("../img/programs/noun_655316_cc.png");
     background-size: 28.44px 22.22px;
     top: 12px;
+
+    @media (min-width: $desktop-width) {
+      background-size: 32px 25px;
+      width: 32px;
+      height: 25px;
+      top: 24px;
+      left: 22px;
+    }
   }
 
   &:hover {
@@ -198,10 +246,21 @@
 .programs__volunteer {
   padding-left: 30px;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 10px;
+  }
+
   &::before {
     top: 5px;
     background-image: url("../img/programs/noun_689837_cc.png");
     background-size: 32px 29px;
+    width: 32px;
+    height: 29px;
+
+    @media (min-width: $desktop-width) {
+      top: 26px;
+      left: 22px;
+    }
   }
 
   &:hover {
@@ -226,9 +285,21 @@
 .programs__religion {
   padding-left: 30px;
 
+  @media (min-width: $desktop-width) {
+    padding-left: 10px;
+    padding-top: 25px;
+  }
+
   &::before {
     background-image: url("../img/programs/noun_836000_cc.png");
     background-size: 23px 25px;
+
+    @media (min-width: $desktop-width) {
+      width: 23px;
+      height: 25px;
+      top: 31px;
+      left: 26px;
+    }
   }
 
   &:hover {
@@ -260,6 +331,8 @@
   margin-left: auto;
 
   @media (min-width: $desktop-width) {
+    padding-top: 12px;
+    padding-right: 100px;
     grid-column: 2 / -1;
     grid-row: 2 / -1;
     width: auto;
@@ -281,6 +354,7 @@
     @media (min-width: $desktop-width) {
       font-size: 28px;
       line-height: 34px;
+      margin-bottom: 24px;
     }
   }
 

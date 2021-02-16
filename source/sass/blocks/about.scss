@@ -1,5 +1,9 @@
 .about {
   margin-bottom: 64px;
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
 }
 
 .about__container {
@@ -39,8 +43,7 @@
     letter-spacing: -0.4px;
 
     @media (min-width: $desktop-width) {
-
-
+      letter-spacing: 0;
       text-align: center;
       font-size: 17px;
       line-height: 29px;
@@ -115,4 +118,3 @@
     }
   }
 }
-
