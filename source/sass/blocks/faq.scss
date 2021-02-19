@@ -60,6 +60,16 @@
   padding-right: 25px;
   border-bottom: 2px solid #e5e5e5;
 
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  cursor: pointer;
+
   &::before {
     position: absolute;
     display: block;
@@ -240,5 +250,11 @@
       width: 480px;
       letter-spacing: 0.5px;
     }
+  }
+}
+
+.faq__item--active {
+  &::after {
+    transform: rotateX(180deg);
   }
 }

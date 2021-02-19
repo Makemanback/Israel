@@ -4,11 +4,12 @@
   @media (min-width: $desktop-width) {
     position: absolute;
     bottom: 58px;
-    right: 182px;
+    left: 872px;
   }
 
   @media (min-width: $wide-desktop) {
-    right: 102px;
+    left: 966px;
+    bottom: 63px;
   }
 }
 
@@ -33,4 +34,9 @@
 
 .socials__image {
   opacity: 0.2;
+
+  &:hover {
+    opacity: 1;
+    fill: $yellow;
+  }
 }

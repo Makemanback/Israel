@@ -44,11 +44,13 @@
 .programs__list {
   position: relative;
   display: grid;
+  overflow: scroll;
   grid-template-columns: repeat(5, 20%);
   gap: 8px;
   grid-column: 1 / -1;
 
   @media (min-width: $desktop-width) {
+    overflow: hidden;
     grid-template-rows: repeat(5, 20%);
     grid-template-columns: 228px;
     grid-column: 1 / 2;
@@ -143,7 +145,7 @@
 
   &:hover {
     &::before {
-      background-image: url("../img/programs/1_g.png");
+      background-image: url("../img/programs/2_g.png");
     }
   }
 
@@ -162,6 +164,7 @@
 
 .programs__common {
   padding-left: 20px;
+  text-align: right;
 
   @media (min-width: $desktop-width) {
     padding-left: 73px;
@@ -197,6 +200,10 @@
 
 .programs__common.programs__button--active {
   text-align: center;
+
+  @media (min-width: $desktop-width) {
+    text-align: left;
+  }
 
   &::before {
     background-image: url("../img/programs/1_w.png");

@@ -3,11 +3,13 @@
   width: 320px;
   height: 768px;
   margin: auto;
+  top: 50px;
   right: 0;
   left: 0;
   display: grid;
   grid-template-rows: 35px 76px 59px;
   padding: 296px 16px 292px 16px;
+  background-color: $white;
 
   background-image: url("../img/modal/modal_checkmark.svg");
   background-size: 66px 64px;
@@ -77,4 +79,17 @@
   text-align: center;
   font-variant: small-caps;
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
+
+
+.success--translate-mob {
+  top: 1700px;
+}
+
+.success--translate-desk {
+  top: 2400px;
+}
+
+.success--translate-feed {
+  top: 7500px;
 }

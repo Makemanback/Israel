@@ -32,4 +32,27 @@
     font-weight: 400;
     line-height: 26px;
   }
+
+  input {
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: $yellow;
+      outline: none;
+    }
+  }
+
+  button {
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+
+    &:focus {
+      outline-color: $yellow;
+    }
+  }
 }
