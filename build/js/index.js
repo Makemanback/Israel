@@ -1,28 +1,22 @@
 "use strict";
 
-var desktop = 1024;
-var slider = document.querySelector('.swiper-container');
-var swiper;
+var _vendor = _interopRequireDefault(require("./vendor.js"));
 
-if (window.innerWidth < desktop) {
-  swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination'
-    }
-  });
-}
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var DESKTOP = 1024;
+var swiper = new _vendor.default('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination'
+  }
+}); // if (window.innerWidth < DESKTOP) {
+// }
 
 var destroySlider = function destroySlider() {
-  if (window.innerWidth >= desktop && swiper !== undefined) {
-    var _swiper = swiper,
-        destroyed = _swiper.destroyed;
-    console.log("destroy");
-    return swiper.destroy(); // if (destroyed !== undefined && destroyed !== true) {
-    //   console.log(`destroyed`)
-    //   return swiper.destroy();
-    // }
-  } else if (window.innerWidth < desktop) {
-    return swiper = new Swiper('.swiper-container', {
+  if (window.innerWidth >= DESKTOP && swiper !== undefined) {
+    return swiper.destroy();
+  } else if (window.innerWidth < DESKTOP) {
+    return swiper = new _vendor.default('.swiper-container', {
       pagination: {
         el: '.swiper-pagination'
       }
@@ -33,3 +27,27 @@ var destroySlider = function destroySlider() {
 };
 
 window.addEventListener('resize', destroySlider);
+var faqItems = document.querySelectorAll('.faq__item>p');
+faqItems.forEach(function (item) {
+  return item.classList.add('visually-hidden');
+});
+faqItems[2].classList.remove('visually-hidden');
+var reviewSlider = new _vendor.default('.swiper-container-slider', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction'
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+}); // открытие модального окна
+
+var phone = document.querySelector('.header__order-call');
+
+var openModal = function openModal() {
+  evt.preventDefault();
+  phone.classList.remove('visually-hidden');
+};
+
+phone.addEventListener('click', openModal);

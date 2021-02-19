@@ -16,7 +16,7 @@
     background-image: url("../img/travel/travel_people.png"), url("../img/travel/watercolor_desk.png");
     background-size: 581px 707px, 1366px 1208px;
     background-repeat: no-repeat, no-repeat;
-    background-position: 12px 127px,0 -73px;
+    background-position: 12px 127px, 0 -73px;
   }
 }
 
@@ -63,7 +63,7 @@
     line-height: 22px;
     opacity: 0.87;
     color: $black;
-    letter-spacing: -0.4px;
+    letter-spacing: 0;
 
     @media (min-width: $desktop-width) {
       grid-column: 2 / 3;
@@ -80,7 +80,7 @@
     font-size: 16px;
     line-height: 26px;
     color: $black;
-    letter-spacing: -0.4px;
+    letter-spacing: 0;
 
     @media (min-width: $desktop-width) {
       grid-column: 2 / 3;
@@ -124,7 +124,7 @@
   line-height: 22px;
   color: $black;
   opacity: 0.87;
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
 
   @media (min-width: $desktop-width) {
     font-size: 15px;
@@ -229,7 +229,7 @@
   line-height: 22px;
   color: #484848;
   opacity: 0.5;
-  letter-spacing: -0.4px;
+  letter-spacing: 0;
 
   @media (min-width: $desktop-width) {
     grid-column: 2 / -1;

@@ -1,0 +1,15 @@
+.close {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 18px;
+  height: 17px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: $desktop-width) {
+    top: 32px;
+    right: 32px;
+  }
+}

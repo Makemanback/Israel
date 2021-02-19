@@ -1,0 +1,244 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 79px;
+
+  @media (min-width: $desktop-width) {
+    align-items: flex-start;
+    padding-left: 110px;
+    background-image: url("../img/faq/bag_mob.png"), url("../img/faq/people_desk.png"), url("../img/faq/watercolor_desk.png");
+    background-size: 153px 177px, 645px 803px, 1366px 1119px;
+    background-position: left 862px, right 135px, 0 56px;
+    background-repeat: no-repeat;
+
+    padding-top: 135px;
+    padding-bottom: 153px;
+    margin-bottom: 0;
+  }
+}
+
+.faq__container {
+  display: grid;
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+  }
+
+  h2 {
+    letter-spacing: -0.6px;
+    margin-bottom: 0;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+    }
+  }
+}
+
+.faq__list {
+  @include list-reset;
+
+  display: grid;
+  padding-right: 16px;
+  padding-left: 16px;
+
+  background-image: url("../img/faq/bag_mob.png");
+  background-size: 146px 177px;
+  background-position: 0 582px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    width: 560px;
+    padding: 0;
+    background-image: none;
+  }
+}
+
+.faq__item {
+  position: relative;
+  padding-top: 37px;
+  padding-right: 25px;
+  border-bottom: 2px solid #e5e5e5;
+
+  &::before {
+    position: absolute;
+    display: block;
+    top: 24px;
+    width: 13px;
+    height: 48px;
+    font-size: 28px;
+    line-height: 48px;
+    font-weight: 700;
+    color: $yellow;
+  }
+
+  &::after {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 17px;
+    height: 12px;
+    top: 48px;
+    right: -1px;
+    background-image: url("../img/faq/open.svg");
+    background-size: contain;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      right: 36px;
+      top: 56px;
+    }
+  }
+
+  &:first-of-type {
+    padding-top: 38px;
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 16px;
+    }
+
+    &::before {
+      content: "1";
+
+      @media (min-width: $desktop-width) {
+        top: 32px;
+      }
+    }
+
+    h3 {
+      padding-bottom: 15px;
+
+      @media (min-width: $desktop-width) {
+        padding-left: 29px;
+        padding-top: 9px;
+      }
+    }
+  }
+
+  &:nth-of-type(2n) {
+    padding-bottom: 7px;
+
+    &::before {
+      content: "2";
+    }
+
+    &::after {
+      top: 45px;
+    }
+
+    h3 {
+      @media (min-width: $desktop-width) {
+        padding-left: 29px;
+        padding-top: 1px;
+      }
+    }
+  }
+
+  &:nth-of-type(3n) {
+    padding-bottom: 15px;
+
+    @media (min-width: $desktop-width) {
+      padding-bottom: 27px;
+    }
+
+    &::before {
+      content: "3";
+    }
+
+    &::after {
+      top: 46px;
+    }
+
+    h3 {
+      @media (min-width: $desktop-width) {
+        padding-left: 29px;
+        padding-top: 1px;
+      }
+    }
+  }
+
+  &:nth-of-type(4n) {
+    padding-bottom: 7px;
+
+    &::before {
+      content: "4";
+    }
+  }
+
+  &:nth-of-type(5n) {
+    padding-top: 36px;
+    padding-bottom: 1px;
+
+    &::before {
+      content: "5";
+    }
+
+    &::after {
+      top: 45px;
+    }
+
+    h3 {
+      padding-bottom: 14px;
+
+      @media (min-width: $desktop-width) {
+        width: 400px;
+        padding-left: 30px;
+        padding-top: 1px;
+        padding-bottom: 24px;
+      }
+    }
+  }
+
+  &:nth-of-type(6n) {
+    padding-top: 36px;
+    padding-bottom: 1px;
+
+    &::before {
+      content: "6";
+    }
+
+    &::after {
+      top: 45px;
+    }
+
+    h3 {
+      @media (min-width: $desktop-width) {
+        width: 400px;
+      }
+    }
+  }
+
+  h3 {
+    margin: 0;
+    padding-left: 25px;
+    padding-bottom: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    color: $black;
+
+    &:first-of-type() {
+      padding-bottom: 15px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 17px;
+      line-height: 25px;
+      padding-bottom: 24px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 22px;
+    color: $black;
+    opacity: 0.74;
+
+    @media (min-width: $desktop-width) {
+      width: 480px;
+      letter-spacing: 0.5px;
+    }
+  }
+}

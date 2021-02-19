@@ -1,0 +1,37 @@
+.map {
+  position: relative;
+
+  @media (min-width: $desktop-width) {
+    grid-column: 2 / -1;
+    margin-top: 15px;
+    margin-left: -19px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 205px;
+    right: 31px;
+    width: 26px;
+    height: 40px;
+    background-image: url("../img/details/marker_mob.png");
+    background-size: contain;
+    z-index: 2;
+
+    @media (min-width: $desktop-width) {
+      width: 18px;
+      height: 28px;
+      top: 229px;
+      right: 166px;
+      background-image: url("../img/details/marker_desk.png");
+    }
+  }
+}
+
+.map__img {
+  @media (min-width: $desktop-width) {
+    width: 702px;
+    height: auto;
+  }
+}

@@ -1,37 +1,60 @@
-const desktop = 1024;
-const slider = document.querySelector('.swiper-container');
-let swiper;
+import Swiper from './vendor.js';
 
-if (window.innerWidth < desktop) {
-  swiper = new Swiper('.swiper-container', {
-    pagination: {
-      el: '.swiper-pagination',
-    }
-  });
-}
+const DESKTOP = 1024;
+let swiper = new Swiper('.swiper-container', {
+  pagination: {
+    el: '.swiper-pagination',
+  },
+});
 
+// if (window.innerWidth < DESKTOP) {
+
+// }
 
 const destroySlider = () => {
-  if (window.innerWidth >= desktop && swiper !== undefined) {
-    const {destroyed} = swiper;
-    console.log(`destroy`)
+  if (window.innerWidth >= DESKTOP && swiper !== undefined) {
     return swiper.destroy();
-    // if (destroyed !== undefined && destroyed !== true) {
-    //   console.log(`destroyed`)
-    //   return swiper.destroy();
-    // }
 
-  } else if (window.innerWidth < desktop) {
-     return (
-       swiper = new Swiper('.swiper-container', {
+  } else if (window.innerWidth < DESKTOP) {
+    return (
+      swiper = new Swiper('.swiper-container', {
         pagination: {
-          el: '.swiper-pagination'
-        }
+          el: '.swiper-pagination',
+        },
       })
-     );
+    );
   } else {
     return;
   }
 }
 
 window.addEventListener('resize', destroySlider)
+
+
+const faqItems = document.querySelectorAll('.faq__item>p');
+
+faqItems.forEach((item) => item.classList.add('visually-hidden'));
+
+faqItems[2].classList.remove('visually-hidden');
+
+const reviewSlider = new Swiper('.swiper-container-slider', {
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+
+
+// открытие модального окна
+const phone = document.querySelector('.header__order-call');
+
+const openModal = () => {
+  evt.preventDefault();
+  phone.classList.remove('visually-hidden');
+}
+
+phone.addEventListener('click', openModal)

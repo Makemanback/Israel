@@ -1,0 +1,70 @@
+.reviews {
+  background-image: url("../img/reviews/watercolor_desk.png");
+  background-size: 560px 324px;
+  background-position: 190px 725px;
+  background-repeat: no-repeat;
+  margin-bottom: 78px;
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+
+    background-image: url("../img/reviews/sketch_desk.png"), url("../img/reviews/watercolor_desk.png");
+    background-size: 535px 318px, 1259px 527px;
+    background-position: 833px 55px, 107px 38px;
+
+    margin-bottom: 38px;
+  }
+}
+
+.reviews__container {
+  display: grid;
+  background-image: url("../img/reviews/sketch_desk.png");
+  background-size: 439px 261px;
+  background-position: 28px 525px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
+    max-width: 1084px;
+    overflow: hidden;
+    margin-left: 0;
+    background: none;
+  }
+
+  @media (min-width: $wide-desktop) {
+    margin-left: 100px;
+  }
+
+  h2 {
+    @media (min-width: $desktop-width) {
+      margin-bottom: 8px;
+      margin-left: 81px;
+    }
+  }
+}
+
+.reviews__slider {
+  position: relative;
+  display: grid;
+  min-height: 991px;
+  padding-right: 16px;
+  padding-left: 16px;
+  min-width: 320px;
+  width: 100%;
+  overflow: hidden;
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    min-height: auto;
+  }
+}
+
+.review__img {
+  margin-bottom: 58px;
+
+  @media (min-width: $desktop-width) {
+    width: 364px;
+    height: auto;
+    grid-row: 1 / 3;
+  }
+}

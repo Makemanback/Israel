@@ -89,13 +89,13 @@ gulp.task("webp", function () {
 });
 
 gulp.task("avif", function () {
-  // return gulp.src("source/img/life/*.png")
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("source/img/footer/*.png")
+  // return gulp.src("source/img/**/*.{png,jpg}")
       .pipe(gulpAvif({
         quality: 90,
         speed: 8
       }))
-      .pipe(gulp.dest("source/img/avif"));
+      .pipe(gulp.dest("source/img/avif/footer"));
 });
 
 gulp.task("sprite", function () {
@@ -130,6 +130,6 @@ gulp.task("clean", function () {
 });
 
 gulp.task("build", gulp.series("clean", "copy",
-"babel",
+// "babel",
 "css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

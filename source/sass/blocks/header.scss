@@ -10,7 +10,6 @@
     background-image: url("../img/header/girl-desktop.png"), url("../img/header/israel.png"), url("../img/header/bg.png");
     background-size: 1366px 906px, 1018px 340px, 1366px 879px;
     background-position: center 0, center 160px, center 0;
-
   }
 }
 
@@ -101,7 +100,7 @@
 
   border-radius: 50%;
   border-width: 2px;
-  border-image: url('../img/header/dashed-border.svg') 0 fill;
+  border-image: url("../img/header/dashed-border.svg") 0 fill;
 }
 
 .header__phone {
@@ -145,7 +144,7 @@
     line-height: 24px;
     text-align: center;
     color: $white;
-    text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.12);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
 
     @media (min-width: $desktop-width) {
       width: 343px;

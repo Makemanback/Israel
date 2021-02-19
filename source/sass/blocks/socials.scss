@@ -1,0 +1,36 @@
+.socials {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 58px;
+    right: 182px;
+  }
+
+  @media (min-width: $wide-desktop) {
+    right: 102px;
+  }
+}
+
+.socials__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -4px;
+}
+
+.socials__list-item {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.socials__link {
+  width: 24px;
+  height: 24px;
+}
+
+.socials__image {
+  opacity: 0.2;
+}

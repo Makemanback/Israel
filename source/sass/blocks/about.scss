@@ -25,6 +25,7 @@
     margin-right: 16px;
     margin-left: 16px;
     letter-spacing: -0.6px;
+    margin-bottom: 26px;
 
     @media (min-width: $desktop-width) {
       line-height: 28px;
@@ -39,14 +40,15 @@
     margin-left: auto;
     padding-right: 16px;
     padding-left: 16px;
-    margin-bottom: 48px;
-    letter-spacing: -0.4px;
+    margin-bottom: 46px;
+    letter-spacing: 0;
 
     @media (min-width: $desktop-width) {
       letter-spacing: 0;
       text-align: center;
       font-size: 17px;
       line-height: 29px;
+      margin-bottom: 48px;
     }
   }
 }

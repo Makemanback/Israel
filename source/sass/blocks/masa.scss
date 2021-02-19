@@ -1,0 +1,126 @@
+.masa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-bottom: 80px;
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/masa/masa_desk.png");
+    background-size: 1361px 583px;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    margin-bottom: 0;
+  }
+}
+
+.masa__container {
+  display: grid;
+  grid-template-rows: 145px 186px 59px;
+  margin-right: auto;
+  margin-left: auto;
+
+  background-image: url("../img/masa/masa_mob.png");
+  background-size: 320px 272px;
+  background-position: 0 43px;
+  background-repeat: no-repeat;
+
+  @media (min-width: $desktop-width) {
+    background-image: none;
+    grid-template-rows: 73px 135px 59px;
+    margin-top: 120px;
+    margin-right: 170px;
+    margin-bottom: 196px;
+  }
+
+  h2 {
+    grid-row: 1 / 2;
+    letter-spacing: -0.7px;
+    font-size: 40px;
+    line-height: 49px;
+    font-weight: 700;
+
+    @media (min-width: $desktop-width) {
+      text-align: left;
+    }
+  }
+
+  p {
+    width: 320px;
+    grid-row: 2 / 3;
+    color: $white;
+    margin: 0;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 25px;
+    padding-left: 23px;
+    opacity: 0.87;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+
+    @media (min-width: $desktop-width) {
+      width: 400px;
+      padding: 0;
+      font-size: 17px;
+      line-height: 29px;
+      letter-spacing: 0.2px;
+    }
+  }
+}
+
+.masa__button {
+  position: relative;
+  grid-row: 3 / 4;
+  width: 264px;
+  padding-left: 31px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 80px;
+  color: $white;
+  font-size: 17px;
+  line-height: 20px;
+  font-variant: small-caps;
+  background: $yellow-gradient;
+
+  @media (min-width: $desktop-width) {
+    width: 230px;
+    margin-left: 0;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    left: 57px;
+    top: 18px;
+    width: 24px;
+    height: 24px;
+    background-image: url("../img/masa/inst.svg");
+    background-size: 20px 20px;
+    background-position: center 2px;
+    background-repeat: no-repeat;
+
+    @media (min-width: $desktop-width) {
+      left: 40px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 8px;
+    height: 10px;
+    left: 65px;
+    top: 24px;
+    background-image: url("../img/masa/Vector.svg");
+    background-size: 8px 8px;
+    background-position: center 2px;
+    background-repeat: no-repeat;
+    z-index: 3;
+
+    @media (min-width: $desktop-width) {
+      left: 48px;
+    }
+  }
+}
