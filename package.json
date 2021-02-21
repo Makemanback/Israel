@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Проект в Лиге А",
   "devDependencies": {
-    "@babel/cli": "7.12.13",
-    "@babel/core": "7.12.13",
-    "@babel/preset-env": "7.12.13",
     "@htmlacademy/editorconfig-cli": "1.x",
     "ajv": "6.9.1",
     "autoprefixer": "9.5.x",
@@ -14,7 +11,6 @@
     "eslint-config-htmlacademy": "2.1.0",
     "gulp": "4.0.x",
     "gulp-avif": "0.1.0",
-    "gulp-babel": "8.0.0",
     "gulp-csso": "3.0.1",
     "gulp-fontgen": "0.2.5",
     "gulp-imagemin": "5.0.3",
@@ -28,7 +24,6 @@
     "gulp-ttf-to-woff": "1.0.3",
     "gulp-ttftowoff2": "1.0.1",
     "gulp-webp": "4.0.1",
-    "pixel-glass": "1.0.13",
     "posthtml-include": "1.2.0",
     "stylelint": "9.10.x",
     "stylelint-config-htmlacademy": "0.1.x"
@@ -62,7 +57,6 @@
   },
   "dependencies": {
     "del": "4.1.1",
-    "inputmask": "5.0.5",
     "swiper": "6.4.11"
   },
   "repository": {

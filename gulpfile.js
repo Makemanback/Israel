@@ -1,7 +1,6 @@
 "use strict";
 
 var gulp = require("gulp");
-// var babel = require("gulp-babel");
 var gulpAvif = require("gulp-avif");
 var plumber = require("gulp-plumber");
 var sourcemap = require("gulp-sourcemaps");

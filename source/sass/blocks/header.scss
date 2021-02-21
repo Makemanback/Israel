@@ -11,6 +11,10 @@
     background-size: 1366px 906px, 1018px 340px, 1366px 879px;
     background-position: center 0, center 160px, center 0;
   }
+
+  @media (min-width: 1367px) {
+    background-size: 1366px 906px, 1018px 340px, cover;
+  }
 }
 
 .header__container {

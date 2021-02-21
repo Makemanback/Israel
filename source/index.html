@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="description" content="israel учебные программы">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="fonts/firasans-bold.woff2" as="font">
+    <link rel="preload" href="fonts/firasans-medium.woff2" as="font">
+    <link rel="preload" href="fonts/firasans-regular.woff2" as="font">
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
     <link rel="stylesheet" href="css/style.min.css">
-    <script type="module" src="js/vendor/swiper-bundle.esm.browser.min.js"></script>
     <title>Israel</title>
   </head>
   <body>
@@ -60,7 +63,7 @@
               <span class="visually-hidden">имя пользователя</span>
             </label>
             <label class="modal__label">
-              <input data-listener="listen" name="tel" type="tel" placeholder="телефон">
+              <input data-listener="listen" name="tel" type="tel" placeholder="телефон" required>
             </label>
             <button data-listener="listen" class="button modal__button">перезвоните мне</button>
             <label class="modal__label-checkbox">
@@ -182,7 +185,7 @@
           <span>Оставьте свой телефон и мы свяжемся с вами, подберём&nbsp;куратора и ответим на все вопросы!</span>
           <form action="post" class="want__form">
             <label aria-label="телефон">
-              <input type="tel" placeholder="телефон">
+              <input type="tel" placeholder="телефон" required>
             </label>
             <button class="button want__button" type="submit">перезвоните мне</button>
           </form>
@@ -227,7 +230,7 @@
                     <source type="image/avif" srcset="img/avif/life/history_mob.avif 1x, img/avif/life/history_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/history_mob.webp 1x, img/webp/life/history_mob@2x.webp 2x">
                     <!-- 288x400 -->
-                    <img class="slider__img" width="288" height="400" src="img/life/history_mob.png" alt="" srcset="img/life/history_mob@2x.png 2x">
+                    <img class="slider__img" width="288" height="400" src="img/life/history_mob.png" alt="храм" srcset="img/life/history_mob@2x.png 2x">
                   </picture>
                   <p class="slider__text">Экскурсии по Израилю и&nbsp;знакомство с его историей</p>
                 </div>
@@ -241,7 +244,7 @@
                     <source type="image/avif" srcset="img/avif/life/jewish_mob.avif 1x, img/avif/life/jewish_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/jewish_mob.webp 1x, img/webp/life/jewish_mob@2x.webp 2x">
                     <!-- 288x400 -->
-                    <img class="slider__img" width="288" height="400" src="img/life/jewish_mob.png" alt="" srcset="img/life/jewish_mob@2x.png 2x">
+                    <img class="slider__img" width="288" height="400" src="img/life/jewish_mob.png" alt="изучение иврита" srcset="img/life/jewish_mob@2x.png 2x">
                   </picture>
                   <p class="slider__text">Изучение иврита</p>
                 </div>
@@ -255,7 +258,7 @@
                     <source type="image/avif" srcset="img/avif/life/study_mob.avif 1x, img/avif/life/study_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/study_mob.webp 1x, img/webp/life/study_mob@2x.webp 2x">
                     <!-- 288x400 -->
-                    <img class="slider__img" width="288" height="400" src="img/life/study_mob.png" alt="" srcset="img/life/study_mob@2x.png 2x">
+                    <img class="slider__img" width="288" height="400" src="img/life/study_mob.png" alt="обучение" srcset="img/life/study_mob@2x.png 2x">
                   </picture>
                   <p class="slider__text">Обучение современным навыкам и профессиям</p>
                 </div>
@@ -269,7 +272,7 @@
                     <source type="image/avif" srcset="img/avif/life/projects_mob.avif 1x, img/avif/life/projects_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/projects_mob.webp 1x, img/webp/life/projects_mob@2x.webp 2x">
                     <!-- 288x400 -->
-                    <img class="slider__img" width="288" height="400" src="img/life/projects_mob.png" alt="" srcset="img/life/projects_mob@2x.png 2x">
+                    <img class="slider__img" width="288" height="400" src="img/life/projects_mob.png" alt="проекты" srcset="img/life/projects_mob@2x.png 2x">
                   </picture>
                   <p class="slider__text">Совместные творческие проекты с израильской молодёжью</p>
                 </div>
@@ -283,7 +286,7 @@
                     <source type="image/avif" srcset="img/avif/life/leadership_mob.avif 1x, img/avif/life/leadership_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/leadership_mob.webp 1x, img/webp/life/leadership_mob@2x.webp 2x">
                     <!-- 288x400 -->
-                    <img class="slider__img" width="240" height="320" src="img/life/leadership_mob.png" alt="" srcset="img/life/leadership_mob@2x.png 2x">
+                    <img class="slider__img" width="240" height="320" src="img/life/leadership_mob.png" alt="лидерство" srcset="img/life/leadership_mob@2x.png 2x">
                   </picture>
                   <p class="slider__text">Развитие лидерства</p>
                 </div>
@@ -352,21 +355,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -407,21 +410,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -462,21 +465,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -517,21 +520,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -572,21 +575,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -627,21 +630,21 @@
                     <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
-                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="" srcset="img/reviews/review_mob@2x.png 2x">
+                    <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x">
                 </picture>
 
-                <div class="review__container">
-                  <h3>Ольга Михайлова</h3>
+                <blockquote class="review__container">
+                  <cite>Ольга Михайлова</cite>
                   <p class="review__program">Программа:</p>
                   <p class="review__period">Арт-Тель, февраль-сетнябрь 2017</p>
-                  <p class="review__text-top">
+                  <p>
                     Долго выбирая программу, на которую ехать - я определилась, взяла на 5 месяцев «иврит как культура». Мне очень повезло оказаться в надежных и заботливых руках Анны, Юлии и Олега.
                   </p>
-                  <p class="review__text-bottom">
+                  <p>
                     С первой же встречи тебе дают понять - что ты не один, у тебя есть практически круглосуточная поддержка по любым вопросам. Тебе предоставляют готовое удобное расписание, жилье, приятные встречи, языковой курс а еще и поездки всей программой в разные уголки страны.
                   </p>
                   <button class="button review__button" type="button">Читать подробнее</button>
-                </div>
+                </blockquote>
 
                 <div class="review__socials socials">
                   <ul class="socials__list">
@@ -729,7 +732,7 @@
               </ul>
             </div>
           </div>
-          <p class="details__text">
+          <p>
             Куратор является опытным специалистом агентства Сохнут и&nbsp;знает о проекте «Маса» всё! Свяжитесь с куратором, узнайте&nbsp;подробнее о программах и выберите свою !
           </p>
         </div>
@@ -763,7 +766,7 @@
               <span class="visually-hidden">имя пользователя</span>
             </label>
             <label class="feedback__phone">
-              <input type="tel" required>
+              <input type="tel" placeholder="телефон" required>
               <span class="visually-hidden"> телефон пользователя</span>
             </label>
             <button class="button feedback__button" type="submit">перезвоните мне</button>
@@ -833,6 +836,7 @@
       </button>
     </div>
 
+    <script type="module" src="js/vendor/swiper-bundle.esm.browser.min.js"></script>
     <script type="module" src="js/index.js"></script>
   </body>
 </html>

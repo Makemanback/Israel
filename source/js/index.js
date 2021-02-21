@@ -167,42 +167,20 @@ faqItems.forEach((item) => item.classList.add('visually-hidden'));
 
 const questionItems = document.querySelectorAll('.faq__item');
 
-const openText = (evt) => {
-
-  const toggleQuestion = (number) => {
-    faqItems.forEach((li) => {
-      li.dataset.item === number ?
-        li.classList.toggle('visually-hidden') :
-        null
-    });
-    questionItems.forEach((li) => {
-      li.dataset.item === number ?
-        li.classList.toggle('faq__item--active') :
-        null
-    })
-  }
-
-  switch (evt.target.dataset.item) {
-    case '1':
-      toggleQuestion('1');
-      break;
-    case '2':
-      toggleQuestion('2');
-      break;
-    case '3':
-      toggleQuestion('3');
-      break;
-    case '4':
-      toggleQuestion('4');
-      break;
-    case '5':
-      toggleQuestion('5');
-      break;
-    case '6':
-      toggleQuestion('6');
-      break;
-  }
+const toggleQuestion = (number) => {
+  faqItems.forEach((li) => {
+    li.dataset.item === number ?
+      li.classList.toggle('visually-hidden') :
+      null
+  });
+  questionItems.forEach((li) => {
+    li.dataset.item === number ?
+      li.classList.toggle('faq__item--active') :
+      null
+  })
 }
+
+const openText = ({target}) => toggleQuestion(target.dataset.item)
 
 questionItems.forEach((item) => {
   item.addEventListener('click', openText);
@@ -218,8 +196,13 @@ const internship = document.querySelector('.programs__internship');
 const volunteer = document.querySelector('.programs__volunteer');
 const religion = document.querySelector('.programs__religion');
 
-programsContainer.style.transform = 'translateX(200px)';
+const transformList = () => {
+  window.innerWidth < DESKTOP ?
+    programsContainer.style.transform = 'translateX(200px)' :
+    programsContainer.style.transform = 'none'
+}
 
+document.addEventListener('resize', transformList)
 const switchProgram = (evt) => {
   evt.preventDefault();
   const {target} = evt;
@@ -275,9 +258,6 @@ const switchProgram = (evt) => {
       toggleProgram('religion', programs[4]);
       break;
   }
-
 }
 
-programs.forEach((program) => {
-  program.addEventListener('click', switchProgram)
-})
+programsContainer.addEventListener('click', switchProgram)

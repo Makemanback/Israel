@@ -44,11 +44,11 @@
 
   button {
     &:hover {
-      opacity: 0.7;
+      background: $yellow-gradient-hover;
     }
 
     &:active {
-      opacity: 1;
+      background: $yellow-gradient-hover;
     }
 
     &:focus {
