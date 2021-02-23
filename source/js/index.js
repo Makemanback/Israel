@@ -261,3 +261,15 @@ const switchProgram = (evt) => {
 }
 
 programsContainer.addEventListener('click', switchProgram)
+
+
+// маски
+const tels = document.querySelectorAll('input[type="tel"]');
+/*eslint-disable*/
+const im = new Inputmask({
+  mask: ['+7-999-999-99-99'],
+  clearIncomplete: true,
+}
+);
+
+im.mask(tels);

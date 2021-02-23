@@ -27,15 +27,6 @@ gulp.task("ttfToWoff2", function () {
   return gulp.src("source/**/*.ttf").pipe(ttfToWoff2()).pipe(gulp.dest("source"));
 })
 
-// gulp.task("babel", function () {
-//   return gulp.src("source/js/index.js")
-//     .pipe(babel({
-//       presets: ["@babel/preset-env"]
-//     }))
-//     .pipe(rename("index.js"))
-//     .pipe(gulp.dest("build/js"));
-// });
-
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
     .pipe(plumber())
@@ -61,7 +52,7 @@ gulp.task("server", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
-  gulp.watch("source/js/*.js", gulp.series("html", "copy", "refresh"));
+  gulp.watch("source/js/**/*.js", gulp.series("html", "copy", "refresh"));
 });
 
 gulp.task("refresh", function (done) {
