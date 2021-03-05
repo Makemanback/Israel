@@ -1,8 +1,6 @@
 .review {
   min-height: 991px;
-  width: 100%;
-  padding-right: 16px;
-  padding-left: 16px;
+  width: calc(100% - 32px);
 
   overflow: hidden;
 
@@ -20,12 +18,14 @@
 
 .review__container {
   position: relative;
-  left: -16px;
   display: grid;
+  width: inherit;
+  padding-right: 16px;
+  padding-left: 16px;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
   margin-bottom: 22px;
   margin-top: -4px;
-  margin-left: 0;
-  margin-right: 16px;
   overflow: hidden;
 
   @media (min-width: $desktop-width) {
@@ -151,5 +151,11 @@
   @media (min-width: $desktop-width) {
     width: 364px;
     height: 480px;
+  }
+}
+
+.review__socials {
+  @media (max-width: 1023px) {
+    padding-left: 16px;
   }
 }

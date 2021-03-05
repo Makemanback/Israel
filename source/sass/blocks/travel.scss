@@ -20,6 +20,7 @@
   }
 }
 
+
 .travel__container {
   position: relative;
   display: grid;
@@ -146,7 +147,7 @@
     font-size: 17px;
     font-weight: 700;
     line-height: 29px;
-    background-color: $white;
+
 
     z-index: 3;
 
@@ -256,5 +257,13 @@
       top: 24px;
       height: 42px;
     }
+  }
+}
+
+.travel__wrapper {
+  @media (min-width: $desktop-width) {
+    background-color: $white;
+    grid-column: 2 / 3;
+    padding: 15px;
   }
 }

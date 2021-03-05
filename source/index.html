@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="description" content="israel учебные программы">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preload" href="fonts/firasans-bold.woff2" as="font">
-    <link rel="preload" href="fonts/firasans-medium.woff2" as="font">
-    <link rel="preload" href="fonts/firasans-regular.woff2" as="font">
-    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
+    <link rel="preload" href="fonts/firasans-medium.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/firasans-regular.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/firasans-bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/montserrat-bold.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/raleway-extrabold.woff2" as="font" crossorigin>
     <link rel="stylesheet" href="css/style.min.css">
-    <script src="js/vendor/inputmask.min.js"></script>
+    <script async src="js/vendor/inputmask.min.js"></script>
     <title>Israel</title>
   </head>
   <body>
     <header class="header">
       <div class="header__container">
         <div class="header__top-row">
-          <div class="header__logo">
+          <a class="header__logo" href="#">
             <picture>
               <!-- 240x84 -->
               <source type="image/avif" srcset="img/avif/header/logo.avif 1x, img/avif/header/logo@2x.avif 2x">
@@ -24,15 +25,15 @@
               <!-- 120x42 -->
               <img class="logo" alt="логотип Маса" width="120" height="42" src="img/header/logo.png" srcset="img/header/logo@2x.png 2x">
             </picture>
-          </div>
+          </a>
 
           <div class="header__contacts">
             <a href="tel:+97226216581" class="header__phone">
               + (972) 2 – 621 – 6581
             </a>
-            <button type="button" class="button header__order-call">
+            <a href="modal.html" class="button header__order-call">
               заказать звонок
-            </button>
+            </a>
           </div>
         </div>
 
@@ -51,8 +52,7 @@
         </div>
         </div>
       </div>
-
-      <div data-listener="listen" class="modal visually-hidden">
+      <div class="modal visually-hidden">
         <div data-listener="listen" class="modal__container">
           <h3 data-listener="listen">Заказать звонок</h3>
           <p data-listener="listen">
@@ -60,11 +60,12 @@
           </p>
           <form data-listener="listen" class="modal__form">
             <label class="modal__label">
-              <input data-listener="listen" name="name" type="text" placeholder="имя">
+              <input data-listener="listen" name="name" type="text" placeholder="имя" required>
               <span class="visually-hidden">имя пользователя</span>
             </label>
             <label class="modal__label">
               <input data-listener="listen" name="tel" type="tel" placeholder="телефон" required>
+              <span class="visually-hidden">номер телефона</span>
             </label>
             <button data-listener="listen" class="button modal__button">перезвоните мне</button>
             <label class="modal__label-checkbox">
@@ -94,8 +95,8 @@
             <picture>
 
               <!-- 1740х920 -->
-              <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/about/photo_about-desk.avif 1x, img/avif/about/photo_about-desk@2x.avif 2x">
-              <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/about/photo_about-desk.webp 1x, img/webp/about/photo_about-desk2x.webp 2x">
+              <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/about/photo_about-desk.avif 1x, img/avif/about/photo_about-desk@2x.avif 2x"> -->
+              <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/about/photo_about-desk.webp 1x, img/webp/about/photo_about-desk@2x.webp 2x">
               <!-- 640x448 -->
               <source type="image/avif" srcset="img/avif/about/photo_about_mob.avif 1x, img/avif/about/photo_about_mob@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/about/photo_about_mob.webp 1x, img/webp/about/photo_about_mob2x.webp 2x">
@@ -195,17 +196,19 @@
 
       <section class="travel">
         <div class="travel__container">
-          <h2>Как поехать</h2>
-          <span>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</span>
-          <h3>Чтобы иметь возможность получить грант на обучение от&nbsp;4200 до 8400$, вы должны:</h3>
-          <ol class="travel__list">
-            <li class="travel__item">Быть в возрасте от 16 до 30 лет</li>
-            <li class="travel__item">Иметь оконченное среднее образование</li>
-            <li class="travel__item">Иметь документально подтверждённые еврейские корни и&nbsp;пройти консульскую проверку</li>
-            <li class="travel__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
-          </ol>
-          <div class="travel__tip">
-            Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
+          <div class="travel__wrapper">
+            <h2>Как поехать</h2>
+            <span>Чтобы узнать подробнее о программе, свяжитесь с координатором в&nbsp;вашем городе. Вы получите актуальные сведения о доступных программах и городах, в которых можете пройти программу.</span>
+            <h3>Чтобы иметь возможность получить грант на обучение от&nbsp;4200 до 8400$, вы должны:</h3>
+            <ol class="travel__list">
+              <li class="travel__item">Быть в возрасте от 16 до 30 лет</li>
+              <li class="travel__item">Иметь оконченное среднее образование</li>
+              <li class="travel__item">Иметь документально подтверждённые еврейские корни и&nbsp;пройти консульскую проверку</li>
+              <li class="travel__item">За последние 2 года быть не больше 3х месяцев подряд непрерывно в Израиле.</li>
+            </ol>
+            <div class="travel__tip">
+              Если вы не подходите по этим правилам, вы всё равно можете принять участие в программе «Маса», оплатив её полную стоимость.
+            </div>
           </div>
         </div>
       </section>
@@ -224,7 +227,7 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 964x1464 -->
-                    <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/history_desk.avif 1x, img/avif/life/history_desk@2x.avif 2x">
+                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/history_desk.avif 1x, img/avif/life/history_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/history_desk.webp 1x, img/webp/life/history_desk@2x.webp 2x">
                     <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/history_desk.png 1x, img/webp/life/history_desk@2x.png 2x">
                     <!-- 576×800 -->
@@ -238,7 +241,7 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/jewish_desk.avif 1x, img/avif/life/jewish_desk@2x.avif 2x">
+                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/jewish_desk.avif 1x, img/avif/life/jewish_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/jewish_desk.webp 1x, img/webp/life/jewish_desk@2x.webp 2x">
                     <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/jewish_desk.png 1x, img/webp/life/jewish_desk@2x.png 2x">
                     <!-- 576×800 -->
@@ -252,7 +255,7 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/study_desk.avif 1x, img/avif/life/study_desk@2x.avif 2x">
+                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/study_desk.avif 1x, img/avif/life/study_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/study_desk.webp 1x, img/webp/life/study_desk@2x.webp 2x">
                     <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/study_desk.png 1x, img/webp/life/study_desk@2x.png 2x">
                     <!-- 576×800 -->
@@ -266,7 +269,7 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/projects_desk.avif 1x, img/avif/life/projects_desk@2x.avif 2x">
+                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/projects_desk.avif 1x, img/avif/life/projects_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/projects_desk.webp 1x, img/webp/life/projects_desk@2x.webp 2x">
                     <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/projects_desk.png 1x, img/webp/life/projects_desk@2x.png 2x">
                     <!-- 576×800 -->
@@ -280,7 +283,7 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/leadership_desk.avif 1x, img/avif/life/leadership_desk@2x.avif 2x">
+                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/leadership_desk.avif 1x, img/avif/life/leadership_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/leadership_desk.webp 1x, img/webp/life/leadership_desk@2x.webp 2x">
                     <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/leadership_desk.png 1x, img/webp/life/leadership_desk@2x.png 2x">
                     <!-- 576×800 -->
@@ -692,7 +695,7 @@
         <div class="details__container">
           <h2>Узнать подробности</h2>
           <p class="details__address">Ваш город:</p>
-          <p class="details__city">новосибирск</p>
+          <a href="#" class="details__city">новосибирск</a>
           <div class="details__curator-card">
             <picture>
               <!-- 224x224 -->
@@ -770,7 +773,7 @@
               <input type="tel" placeholder="телефон" required>
               <span class="visually-hidden"> телефон пользователя</span>
             </label>
-            <button class="button feedback__button" type="submit">перезвоните мне</button>
+            <a href="modal.html" class="button feedback__button" type="submit">перезвоните мне</a>
           </form>
         </div>
       </section>
@@ -826,17 +829,19 @@
     </footer>
 
     <div class="success visually-hidden">
-      <h3>Заявка принята</h3>
-      <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
-      <button class="button success__button">понятно</button>
-      <button class="close">
-        <svg class="close-image-modal" width="18" height="17" aria-labelledby="modal-close-success">
-          <title id="modal-close-success">закрыть модальное окно</title>
-          <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-        </svg>
-      </button>
+      <div class="success__container">
+        <h3>Заявка принята</h3>
+        <p>Мы приняли ваши данные и вскоре мы перезвоним вам для уточнения деталей!</p>
+        <button class="button success__button">понятно</button>
+        <button class="close">
+          <svg class="close-image-modal" width="18" height="17" aria-labelledby="modal-close-success">
+            <title id="modal-close-success">закрыть модальное окно</title>
+            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
     </div>
 
-    <script type="module" src="js/index.js"></script>
+    <script rel="preload" as="script" type="module" src="js/index.js" crossorigin></script>
   </body>
 </html>

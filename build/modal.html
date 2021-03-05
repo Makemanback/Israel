@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="печатные платы интернет магазин smart device умные технологим">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Smart Device Form</title>
+</head>
+<body>
+  <div class="modal">
+    <div data-listener="listen" class="modal__container">
+      <h3 data-listener="listen">Заказать звонок</h3>
+      <p data-listener="listen">
+        Оставьте ваши контактные данные, мы&nbsp;свяжемся с вами в течение рабочего дня и обязательно поможем найти ответ на ваш вопрос!
+      </p>
+      <form data-listener="listen" class="modal__form">
+        <label class="modal__label">
+          <input data-listener="listen" name="name" type="text" placeholder="имя" required="">
+          <span class="visually-hidden">имя пользователя</span>
+        </label>
+        <label class="modal__label">
+          <input data-listener="listen" name="tel" type="tel" placeholder="телефон" required="">
+          <span class="visually-hidden">номер телефона</span>
+        </label>
+        <button data-listener="listen" class="button modal__button">перезвоните мне</button>
+        <label class="modal__label-checkbox">
+          <input data-listener="listen" type="checkbox" required="">
+          <span data-listener="listen" class="modal__label-text">
+            Нажимая на кнопку, вы даёте согласие на обработку персональных данных
+          </span>
+        </label>
+      </form>
+      <button class="close">
+        <svg class="close-image-modal" width="18" height="17" aria-labelledby="modal-close">
+          <title id="modal-close">закрыть модальное окно</title>
+          <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

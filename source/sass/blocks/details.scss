@@ -80,6 +80,12 @@
     grid-column: 2 / 3;
     padding-left: 15px;
     font-variant: small-caps;
+    color: $black;
+    font-family: "Fira Sans", "Arial", sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    opacity: 0.74;
 
     @media (min-width: $desktop-width) {
       padding-left: 4px;

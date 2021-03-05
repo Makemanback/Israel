@@ -44,7 +44,7 @@
 .programs__list {
   position: relative;
   display: grid;
-  overflow: scroll;
+  overflow: visible;
   grid-template-columns: repeat(5, 20%);
   gap: 8px;
   grid-column: 1 / -1;
@@ -115,6 +115,7 @@
 
     &:hover {
       color: $white;
+      background: $yellow-gradient;
     }
 
     @media (min-width: $desktop-width) {
@@ -182,6 +183,7 @@
     &::before {
       background-image: url("../img/programs/noun_1240873_cc.png");
       background-size: 24.89px 29.33px;
+      left: 45%;
 
       @media (min-width: $desktop-width) {
         background-size: 28px 33px;
@@ -213,6 +215,7 @@
     }
 
     &::before {
+      left: 12px;
       background-image: url("../img/programs/1_w.png");
     }
   }

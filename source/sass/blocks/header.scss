@@ -1,7 +1,7 @@
 .header {
   position: relative;
   background-image: url("../img/header/girl.png"), url("../img/header/israel.png"), url("../img/header/bg.png");
-  background-size: 320px 605px, 347px 122px, 912px 587px;
+  background-size: 320px 605px, 347px 122px, cover;
   background-position: center 32px, center 168px, center 32px;
   background-repeat: no-repeat;
   color: $black;
@@ -27,7 +27,7 @@
   @media (min-width: $desktop-width) {
     max-width: 1152px;
     row-gap: 458px;
-    margin-bottom: 0;
+    margin-bottom: 102px;
   }
 }
 
@@ -69,9 +69,9 @@
   align-items: flex-end;
 
   @media (min-width: $desktop-width) {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px;
     width: 100%;
   }
 }
@@ -114,7 +114,9 @@
   color: $black;
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 0;
+    width: fit-content;
+    margin-right: auto;
+    margin-bottom: 16px;
   }
 
   &:hover {
@@ -133,14 +135,18 @@
 .header__order-call {
   margin-right: 2px;
   font-weight: 500;
+  color: $black;
   font-variant: small-caps;
   font-size: 14px;
   line-height: 17px;
   border-bottom: 2px dashed $black;
 
   @media (min-width: $desktop-width) {
+    width: fit-content;
+    margin-left: auto;
     font-size: 15px;
     line-height: 18px;
+    margin-bottom: 14px;
   }
 
   &:hover {
@@ -167,6 +173,8 @@
   h2 {
     width: 288px;
     margin: 0;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 20px;
     font-weight: 700;
     line-height: 24px;
@@ -176,14 +184,12 @@
 
     @media (min-width: $desktop-width) {
       width: 343px;
-      margin-right: auto;
-      margin-left: auto;
       font-size: 24px;
       line-height: 29px;
     }
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 202px;
+    margin-bottom: 100px;
   }
 }

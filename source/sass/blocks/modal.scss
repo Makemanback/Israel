@@ -1,9 +1,20 @@
 .modal {
   position: absolute;
-  top: 50px;
+  top: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  z-index: 3;
+}
+
+.modal__container {
+  position: relative;
+  display: grid;
+  grid-template-rows: 35px 120px 265px;
   width: 320px;
   height: 768px;
   left: 0;
@@ -15,26 +26,13 @@
   padding-left: 16px;
   background-color: $white;
 
-  z-index: 3;
 
   @media (min-width: $desktop-width) {
-    top: 100px;
+    grid-template-rows: 50px 110px 265px;
     width: 480px;
     height: 521px;
     padding: 56px 72px 40px 48px;
     border-radius: 8px;
-  }
-}
-
-.modal__container {
-  display: grid;
-  grid-template-rows: 35px 120px 265px;
-  padding-right: 16px;
-  padding-left: 16px;
-
-  @media (min-width: $desktop-width) {
-    grid-template-rows: 50px 110px 265px;
-    padding: 0;
   }
 
   h3 {
@@ -147,6 +145,15 @@
     &:focus + .modal__label-text::after {
       outline: auto 5px -webkit-focus-ring-color;
     }
+
+    &:checked + .modal__label-text::after {
+      border: 2px solid $yellow;
+      border-radius: 2px;
+      background-image: url("../img/modal/checkbox-checked.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 15px;
+    }
   }
 }
 
@@ -154,7 +161,7 @@
   position: relative;
   display: block;
   font-size: 13px;
-  font-weight: 400px;
+  font-weight: 400;
   line-height: 19px;
   color: $black;
   opacity: 0.74;

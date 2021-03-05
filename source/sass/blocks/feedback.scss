@@ -38,6 +38,7 @@
     @media (min-width: $desktop-width) {
       max-width: 330px;
       margin: 0;
+      margin-right: 20px;
       padding-top: 4px;
       margin-left: -2px;
       margin-bottom: 13px;
@@ -96,7 +97,7 @@
     &::placeholder {
       font-weight: 500;
       font-size: 17px;
-      line-height: 20px;
+      line-height: 52px;
       font-variant: small-caps;
       color: #484848;
       opacity: 0.5;

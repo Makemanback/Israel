@@ -31,6 +31,7 @@
 
     @media (min-width: $desktop-width) {
       text-align: left;
+      background-color: $white;
     }
   }
 }
@@ -51,6 +52,7 @@
     width: 560px;
     padding: 0;
     background-image: none;
+    background-color: $white;
   }
 }
 

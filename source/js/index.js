@@ -70,6 +70,7 @@ const closeEscModal = (evt) => {
     evt.preventDefault();
     modal.classList.add('visually-hidden');
     success.classList.add('visually-hidden');
+    document.body.style.overflow = 'visible';
   }
 };
 
@@ -77,6 +78,7 @@ const closeModal = (evt) => {
   evt.preventDefault();
   modal.classList.add('visually-hidden');
   success.classList.add('visually-hidden');
+  document.body.style.overflow = 'visible';
   document.removeEventListener('keydown', closeEscModal)
   document.removeEventListener('click', closeByOverlay)
 }
@@ -89,6 +91,7 @@ const closeByOverlay = (evt) => {
       target !== wantBtn &&
       target !== feedBtn) {
     evt.preventDefault();
+    document.body.style.overflow = 'visible';
     modal.classList.add('visually-hidden');
     success.classList.add('visually-hidden');
   }
@@ -97,6 +100,8 @@ const closeByOverlay = (evt) => {
 const openModal = (evt) => {
   evt.preventDefault();
   modal.classList.remove('visually-hidden');
+  name.focus();
+  document.body.style.overflow = 'hidden';
 
   if (storage) {
     name.value = storage;
@@ -121,10 +126,18 @@ const closeSuccess = (evt) => {
   document.addEventListener('click', closeByOverlay);
 }
 
+const sendForm = () => {
+  if (name.value && tel.value !== '') {
+    modal.classList.add('visually-hidden');
+    success.classList.remove('visually-hidden');
+    document.body.style.overflow = 'visible';
+    document.removeEventListener('keydown', closeEscModal);
+  }
+};
+
 const submitForm = (evt) => {
   evt.preventDefault()
-  modal.classList.add('visually-hidden');
-  success.classList.remove('visually-hidden');
+  sendForm();
 
   if (isStorageSupport) {
     localStorage.setItem('name', name.value);
@@ -147,16 +160,27 @@ const submitFormWant = (evt) => {
   document.addEventListener('click', closeByOverlay);
 }
 
-wantBtn.addEventListener('click', submitFormWant)
+wantBtn.addEventListener('click', submitFormWant);
+
+const feedbackInputs = Array.from(document.querySelectorAll('.feedback__form input'));
+
+const checkInputs = () => {
+  return feedbackInputs.some((input) => input.value !== '')
+}
+
 
 // блок обратной связи
 const submitFormFeed = (evt) => {
   evt.preventDefault()
-  success.classList.add('success--translate-feed');
 
-  success.classList.remove('visually-hidden');
-  document.addEventListener('keydown', closeEscModal);
-  document.addEventListener('click', closeByOverlay);
+  if (checkInputs()) {
+
+    success.classList.add('success--translate-feed');
+
+    success.classList.remove('visually-hidden');
+    document.addEventListener('keydown', closeEscModal);
+    document.addEventListener('click', closeByOverlay);
+  }
 }
 
 feedBtn.addEventListener('click', submitFormFeed);
@@ -273,3 +297,12 @@ const im = new Inputmask({
 );
 
 im.mask(tels);
+
+const scroll = document.querySelector('.header__scroll-button');
+const life = document.querySelector('.life');
+
+const scrollDown = (elem) => {
+    return elem.scrollIntoView({block: 'center', behavior: 'smooth'});
+}
+
+scroll.addEventListener('click', () => scrollDown(life));

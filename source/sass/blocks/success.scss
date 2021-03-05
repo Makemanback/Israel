@@ -1,5 +1,14 @@
 .success {
   position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(255, 255, 255, 0.9);
+
+  z-index: 3;
+}
+
+.success__container {
   width: 320px;
   height: 768px;
   margin: auto;
@@ -91,5 +100,5 @@
 }
 
 .success--translate-feed {
-  top: 7500px;
+  top: 7200px;
 }

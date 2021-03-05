@@ -2,11 +2,13 @@
   position: absolute;
   top: 24px;
   right: 24px;
-  width: 18px;
-  height: 17px;
-  padding: 0;
+  width: 22px;
+  height: 21px;
+  padding: 4px;
   border: none;
   background-color: transparent;
+
+  cursor: pointer;
 
   @media (min-width: $desktop-width) {
     top: 32px;

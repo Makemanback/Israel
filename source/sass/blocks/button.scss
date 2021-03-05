@@ -7,4 +7,8 @@
   padding: 0;
 
   cursor: pointer;
+
+  &:hover {
+    background: linear-gradient(109.15deg, #ffc341 -50.3%, #ffd701 63.1%);
+  }
 }
