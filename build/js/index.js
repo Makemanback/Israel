@@ -1,5 +1,7 @@
 import Swiper from './vendor/swiper-bundle.esm.browser.min.js';
+import IMask from './vendor/imask.es.min.js';
 
+// aws  [s3, лямбда, ec2] (продукты) посмотреть
 const DESKTOP = 1024;
 const ESC_BUTTON = 'Escape';
 
@@ -71,6 +73,7 @@ const closeEscModal = (evt) => {
     modal.classList.add('visually-hidden');
     success.classList.add('visually-hidden');
     document.body.style.overflow = 'visible';
+    modal.style.display = 'none';
   }
 };
 
@@ -79,6 +82,7 @@ const closeModal = (evt) => {
   modal.classList.add('visually-hidden');
   success.classList.add('visually-hidden');
   document.body.style.overflow = 'visible';
+  modal.style.display = 'none';
   document.removeEventListener('keydown', closeEscModal)
   document.removeEventListener('click', closeByOverlay)
 }
@@ -92,6 +96,7 @@ const closeByOverlay = (evt) => {
       target !== feedBtn) {
     evt.preventDefault();
     document.body.style.overflow = 'visible';
+    modal.style.display = 'none';
     modal.classList.add('visually-hidden');
     success.classList.add('visually-hidden');
   }
@@ -99,6 +104,7 @@ const closeByOverlay = (evt) => {
 
 const openModal = (evt) => {
   evt.preventDefault();
+  modal.style.display = 'flex'
   modal.classList.remove('visually-hidden');
   name.focus();
   document.body.style.overflow = 'hidden';
@@ -165,7 +171,7 @@ wantBtn.addEventListener('click', submitFormWant);
 const feedbackInputs = Array.from(document.querySelectorAll('.feedback__form input'));
 
 const checkInputs = () => {
- return feedbackInputs.some((input) => input.value !== '')
+  return feedbackInputs.some((input) => input.value !== '')
 }
 
 
@@ -212,7 +218,7 @@ questionItems.forEach((item) => {
 
 // переключение программ
 const programsContainer = document.querySelector('.programs__list');
-const programs = document.querySelectorAll('.programs__list>button');
+const programs = document.querySelectorAll('.programs__button');
 const programItems = document.querySelectorAll('.programs__description>li');
 const common = document.querySelector('.programs__common');
 const academic = document.querySelector('.programs__academic');
@@ -220,41 +226,42 @@ const internship = document.querySelector('.programs__internship');
 const volunteer = document.querySelector('.programs__volunteer');
 const religion = document.querySelector('.programs__religion');
 
-const transformList = () => {
-  window.innerWidth < DESKTOP ?
-    programsContainer.style.transform = 'translateX(200px)' :
-    programsContainer.style.transform = 'none'
-}
+// const transformList = () => {
+//   window.innerWidth < DESKTOP ?
+//     programsContainer.style.transform = 'translateX(200px)' :
+//     programsContainer.style.transform = 'none'
+// }
 
-document.addEventListener('resize', transformList)
+// document.addEventListener('resize', transformList)
 const switchProgram = (evt) => {
   evt.preventDefault();
   const {target} = evt;
 
   const toggleProgram = (programName, activeBtn) => {
-    if (window.innerWidth < DESKTOP) {
-      const translate = (px) => {
-        programsContainer.style.transform = `translateX(${px}px)`;
-      }
-      switch (target) {
-        case common:
-          translate('390')
-          break;
-        case academic:
-          translate('200')
-          break;
-        case internship:
-          translate('0')
-          break;
-        case volunteer:
-          translate('-200')
-          break;
-        case religion:
-          translate('-400')
-          break;
-      }
+    // if (window.innerWidth < DESKTOP) {
+    //   const translate = (px) => {
+    //     programsContainer.style.transform = `translateX(${px}px)`;
+    //   }
+    //   switch (target) {
+    //     case common:
+    //       translate('390')
+    //       break;
+    //     case academic:
+    //       translate('200')
+    //       break;
+    //     case internship:
+    //       translate('0')
+    //       break;
+    //     case volunteer:
+    //       translate('-200')
+    //       break;
+    //     case religion:
+    //       translate('-400')
+    //       break;
+    //   }
 
-    }
+    // }
+
     programItems.forEach((li) => {
       li.dataset.program === programName ?
         li.classList.remove('visually-hidden') :
@@ -288,15 +295,15 @@ programsContainer.addEventListener('click', switchProgram)
 
 
 // маски
+
 const tels = document.querySelectorAll('input[type="tel"]');
 /*eslint-disable*/
-const im = new Inputmask({
-  mask: ['+7-999-999-99-99'],
-  clearIncomplete: true,
-}
-);
+const maskOptions = {
+  mask: '+{7}(000)000-00-00',
 
-im.mask(tels);
+};
+
+const masks = tels.forEach((tel) => IMask(tel, maskOptions));
 
 const scroll = document.querySelector('.header__scroll-button');
 const life = document.querySelector('.life');
@@ -306,3 +313,10 @@ const scrollDown = (elem) => {
 }
 
 scroll.addEventListener('click', () => scrollDown(life));
+
+
+
+// const programsSwiper = new Swiper('.programs__list', {
+//   slidesPerView: 5,
+//   spaceBetween: 10,
+// });

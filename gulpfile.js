@@ -82,8 +82,8 @@ gulp.task("webp", function () {
 gulp.task("avif", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
       .pipe(gulpAvif({
-        quality: 85,
-        speed: 0
+        quality: 60,
+        speed: 5
       }))
       .pipe(gulp.dest("source/img/avif/"));
 });
