@@ -1,7 +1,6 @@
 import Swiper from './vendor/swiper-bundle.esm.browser.min.js';
 import IMask from './vendor/imask.es.min.js';
 
-// aws  [s3, лямбда, ec2] (продукты) посмотреть
 const DESKTOP = 1024;
 const ESC_BUTTON = 'Escape';
 
