@@ -47,14 +47,21 @@ const reviewSlider = new Swiper('.swiper-container-slider', {
 reviewSlider.init();
 
 // открытие модального окна
-const name = document.querySelector('[name=name]')
-const tel = document.querySelector('[name=tel]')
+const name = document.querySelector('[name=name]');
+const tel = document.querySelector('[name=tel]');
 const phone = document.querySelector('.header__order-call');
 const modal = document.querySelector('.modal');
+const modalCheckbox = document.querySelector('[name=modal_checkbox]');
 const close = document.querySelectorAll('.close');
 const success = document.querySelector('.success');
 const wantBtn = document.querySelector('.want__button');
 const feedBtn = document.querySelector('.feedback__button');
+
+const wantName = document.querySelector('[name=want_tel]');
+const feedbackName = document.querySelector('[name=feedback_name]');
+const feedbackTel = document.querySelector('[name=feedback_tel]');
+
+modal.style.display = 'none';
 
 let isStorageSupport = true;
 let storage = '';
@@ -64,6 +71,13 @@ try {
   storage = localStorage.getItem('tel');
 } catch (err) {
   isStorageSupport = false;
+}
+
+
+if (storage) {
+  wantName.value = storage;
+  feedbackName.value = storage;
+  feedbackTel.value = storage;
 }
 
 const closeEscModal = (evt) => {
@@ -127,15 +141,16 @@ const submitBtn = document.querySelector('.modal__button');
 
 const closeSuccess = (evt) => {
   evt.preventDefault()
+  document.body.style.overflow = 'visible';
   document.addEventListener('keydown', closeEscModal);
   document.addEventListener('click', closeByOverlay);
 }
 
 const sendForm = () => {
-  if (name.value && tel.value !== '') {
+  if (name.value!== '' && tel.value.length === 16 && modalCheckbox.checked) {
     modal.classList.add('visually-hidden');
     success.classList.remove('visually-hidden');
-    document.body.style.overflow = 'visible';
+    document.body.style.overflow = 'hidden';
     document.removeEventListener('keydown', closeEscModal);
   }
 };
@@ -156,33 +171,29 @@ success.addEventListener('click', closeSuccess);
 // блок хочу поехать
 const submitFormWant = (evt) => {
   evt.preventDefault()
-  window.innerWidth > DESKTOP ?
-    success.classList.add('success--translate-desk') :
-    success.classList.add('success--translate-mob');
+  if (wantName.value.length === 16) {
+    window.innerWidth > DESKTOP
+      ? success.classList.add('success--translate-desk')
+      : success.classList.add('success--translate-mob');
 
-  success.classList.remove('visually-hidden');
-  document.addEventListener('keydown', closeEscModal);
-  document.addEventListener('click', closeByOverlay);
+    success.classList.remove('visually-hidden');
+    document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', closeEscModal);
+    document.addEventListener('click', closeByOverlay);
+  }
 }
 
 wantBtn.addEventListener('click', submitFormWant);
-
-const feedbackInputs = Array.from(document.querySelectorAll('.feedback__form input'));
-
-const checkInputs = () => {
-  return feedbackInputs.some((input) => input.value !== '')
-}
-
 
 // блок обратной связи
 const submitFormFeed = (evt) => {
   evt.preventDefault()
 
-  if (checkInputs()) {
-
+  if (feedbackName.value !== '' && feedbackTel.value.length === 16) {
     success.classList.add('success--translate-feed');
 
     success.classList.remove('visually-hidden');
+    document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', closeEscModal);
     document.addEventListener('click', closeByOverlay);
   }
@@ -225,41 +236,11 @@ const internship = document.querySelector('.programs__internship');
 const volunteer = document.querySelector('.programs__volunteer');
 const religion = document.querySelector('.programs__religion');
 
-// const transformList = () => {
-//   window.innerWidth < DESKTOP ?
-//     programsContainer.style.transform = 'translateX(200px)' :
-//     programsContainer.style.transform = 'none'
-// }
-
-// document.addEventListener('resize', transformList)
 const switchProgram = (evt) => {
   evt.preventDefault();
   const {target} = evt;
 
   const toggleProgram = (programName, activeBtn) => {
-    // if (window.innerWidth < DESKTOP) {
-    //   const translate = (px) => {
-    //     programsContainer.style.transform = `translateX(${px}px)`;
-    //   }
-    //   switch (target) {
-    //     case common:
-    //       translate('390')
-    //       break;
-    //     case academic:
-    //       translate('200')
-    //       break;
-    //     case internship:
-    //       translate('0')
-    //       break;
-    //     case volunteer:
-    //       translate('-200')
-    //       break;
-    //     case religion:
-    //       translate('-400')
-    //       break;
-    //   }
-
-    // }
 
     programItems.forEach((li) => {
       li.dataset.program === programName ?
@@ -299,7 +280,6 @@ const tels = document.querySelectorAll('input[type="tel"]');
 /*eslint-disable*/
 const maskOptions = {
   mask: '+{7}(000)000-00-00',
-
 };
 
 const masks = tels.forEach((tel) => IMask(tel, maskOptions));
@@ -312,10 +292,3 @@ const scrollDown = (elem) => {
 }
 
 scroll.addEventListener('click', () => scrollDown(life));
-
-
-
-// const programsSwiper = new Swiper('.programs__list', {
-//   slidesPerView: 5,
-//   spaceBetween: 10,
-// });

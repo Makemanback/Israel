@@ -57,6 +57,8 @@
 .header__logo {
   margin-right: auto;
 
+  cursor: auto;
+
   @media (min-width: $desktop-width) {
     position: absolute;
     left: 44%;

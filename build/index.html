@@ -16,7 +16,7 @@
     <header class="header">
       <div class="header__container">
         <div class="header__top-row">
-          <a class="header__logo" href="#">
+          <a class="header__logo">
             <picture>
               <!-- 240x84 -->
               <source type="image/avif" srcset="img/avif/header/logo.avif 1x, img/avif/header/logo@2x.avif 2x">
@@ -59,16 +59,16 @@
           </p>
           <form data-listener="listen" class="modal__form">
             <label class="modal__label">
-              <input data-listener="listen" name="name" type="text" placeholder="имя" required="">
+              <input id="modal__name" data-listener="listen" name="name" type="text" placeholder="имя" required="">
               <span class="visually-hidden">имя пользователя</span>
             </label>
             <label class="modal__label">
-              <input data-listener="listen" name="tel" type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
+              <input id="modal__tel" data-listener="listen" name="tel" type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
               <span class="visually-hidden">номер телефона</span>
             </label>
             <button data-listener="listen" class="button modal__button">перезвоните мне</button>
             <label class="modal__label-checkbox">
-              <input data-listener="listen" type="checkbox" required="">
+              <input name="modal_checkbox" data-listener="listen" type="checkbox" required="">
               <span data-listener="listen" class="modal__label-text">
                 Нажимая на кнопку, вы даёте согласие на обработку персональных данных
               </span>
@@ -98,7 +98,7 @@
               <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/about/photo_about-desk.webp 1x, img/webp/about/photo_about-desk@2x.webp 2x">
               <!-- 640x448 -->
               <source type="image/avif" srcset="img/avif/about/photo_about_mob.avif 1x, img/avif/about/photo_about_mob@2x.avif 2x">
-              <source type="image/webp" srcset="img/webp/about/photo_about_mob.webp 1x, img/webp/about/photo_about_mob2x.webp 2x">
+              <source type="image/webp" srcset="img/webp/about/photo_about_mob.webp 1x, img/webp/about/photo_about_mob@2x.webp 2x">
               <!-- 320x224 -->
               <img width="320" height="224" class="about__picture" src="img/about/photo_about_mob.png" alt="парни жарят шашлык" srcset="img/about/photo_about_mob@2x.png 2x" loading="lazy">
             </picture>
@@ -188,7 +188,7 @@
           <span>Оставьте свой телефон и мы свяжемся с вами, подберём&nbsp;куратора и ответим на все вопросы!</span>
           <form action="post" class="want__form">
             <label aria-label="телефон">
-              <input type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
+              <input type="tel" name="want_tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
             </label>
             <button class="button want__button" type="submit">перезвоните мне</button>
           </form>
@@ -767,14 +767,14 @@
           <p>Мы не передаём данные третьим лицам. Ваши данные будут в безопасности и вам не придёт спам от нас!</p>
           <form class="feedback__form">
             <label class="feedback__name">
-              <input type="text" required="" placeholder="имя">
+              <input name="feedback_name" type="text" required="" placeholder="имя">
               <span class="visually-hidden">имя пользователя</span>
             </label>
             <label class="feedback__phone">
-              <input type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
+              <input name="feedback_tel" type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
               <span class="visually-hidden"> телефон пользователя</span>
             </label>
-            <a href="modal.html" class="button feedback__button" type="submit">перезвоните мне</a>
+            <button class="button feedback__button" type="submit">перезвоните мне</button>
           </form>
         </div>
       </section>

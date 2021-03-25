@@ -1,5 +1,4 @@
 .modal {
-  display: none;
   position: absolute;
   top: 0;
   // display: flex;
@@ -94,7 +93,7 @@
     &::placeholder {
       font-size: 17px;
       font-weight: 500;
-      line-height: 20px;
+      line-height: 51px;
       font-variant: small-caps;
       color: #484848;
       opacity: 0.5;
