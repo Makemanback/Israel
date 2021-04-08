@@ -19,7 +19,6 @@
           <a class="header__logo">
             <picture>
               <!-- 240x84 -->
-              <source type="image/avif" srcset="img/avif/header/logo.avif 1x, img/avif/header/logo@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/header/logo.webp 1x, img/webp/header/logo@2x.webp 2x">
               <!-- 120x42 -->
               <img class="logo" alt="логотип Маса" width="120" height="42" src="img/header/logo.png" srcset="img/header/logo@2x.png 2x">
@@ -42,7 +41,6 @@
           <button class="header__scroll-button button">
             <picture>
               <!-- 34x52 -->
-              <source type="image/avif" srcset="img/avif/header/mouse.avif 1x, img/avif/header/mouse@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/header/mouse.webp 1x, img/webp/header/mouse@2x.webp 2x">
               <!-- 17x26 -->
               <img alt="мышка" width="17" height="26" src="img/header/mouse.png" srcset="img/header/mouse.png 2x">
@@ -66,13 +64,13 @@
               <input id="modal__tel" data-listener="listen" name="tel" type="tel" placeholder="телефон" pattern="[0-9][-|(]?[0-9]{3}[-|)]?[0-9]{3}[-]?[0-9]{2}[-]?[0-9]{2}" required="">
               <span class="visually-hidden">номер телефона</span>
             </label>
-            <button data-listener="listen" class="button modal__button">перезвоните мне</button>
             <label class="modal__label-checkbox">
               <input name="modal_checkbox" data-listener="listen" type="checkbox" required="">
               <span data-listener="listen" class="modal__label-text">
                 Нажимая на кнопку, вы даёте согласие на обработку персональных данных
               </span>
             </label>
+            <button type="submit" data-listener="listen" class="button modal__button">перезвоните мне</button>
           </form>
           <button class="close">
             <svg class="close-image-modal" width="18" height="17" aria-labelledby="modal-close">
@@ -94,10 +92,8 @@
             <picture>
 
               <!-- 1740х920 -->
-              <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/about/photo_about-desk.avif 1x, img/avif/about/photo_about-desk@2x.avif 2x"> -->
               <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/about/photo_about-desk.webp 1x, img/webp/about/photo_about-desk@2x.webp 2x">
               <!-- 640x448 -->
-              <source type="image/avif" srcset="img/avif/about/photo_about_mob.avif 1x, img/avif/about/photo_about_mob@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/about/photo_about_mob.webp 1x, img/webp/about/photo_about_mob@2x.webp 2x">
               <!-- 320x224 -->
               <img width="320" height="224" class="about__picture" src="img/about/photo_about_mob.png" alt="парни жарят шашлык" srcset="img/about/photo_about_mob@2x.png 2x" loading="lazy">
@@ -228,11 +224,9 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 964x1464 -->
-                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/history_desk.avif 1x, img/avif/life/history_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/history_desk.webp 1x, img/webp/life/history_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/history_desk.png 1x, img/webp/life/history_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/life/history_desk.png 1x, img/life/history_desk@2x.png 2x">
                     <!-- 576×800 -->
-                    <source type="image/avif" srcset="img/avif/life/history_mob.avif 1x, img/avif/life/history_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/history_mob.webp 1x, img/webp/life/history_mob@2x.webp 2x">
                     <!-- 288x400 -->
                     <img class="slider__img" width="288" height="400" src="img/life/history_mob.png" alt="храм" srcset="img/life/history_mob@2x.png 2x" loading="lazy">
@@ -242,11 +236,9 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/jewish_desk.avif 1x, img/avif/life/jewish_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/jewish_desk.webp 1x, img/webp/life/jewish_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/jewish_desk.png 1x, img/webp/life/jewish_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/life/jewish_desk.png 1x, img/life/jewish_desk@2x.png 2x">
                     <!-- 576×800 -->
-                    <source type="image/avif" srcset="img/avif/life/jewish_mob.avif 1x, img/avif/life/jewish_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/jewish_mob.webp 1x, img/webp/life/jewish_mob@2x.webp 2x">
                     <!-- 288x400 -->
                     <img class="slider__img" width="288" height="400" src="img/life/jewish_mob.png" alt="изучение иврита" srcset="img/life/jewish_mob@2x.png 2x" loading="lazy">
@@ -256,11 +248,9 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/study_desk.avif 1x, img/avif/life/study_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/study_desk.webp 1x, img/webp/life/study_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/study_desk.png 1x, img/webp/life/study_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/life/study_desk.png 1x, img/life/study_desk@2x.png 2x">
                     <!-- 576×800 -->
-                    <source type="image/avif" srcset="img/avif/life/study_mob.avif 1x, img/avif/life/study_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/study_mob.webp 1x, img/webp/life/study_mob@2x.webp 2x">
                     <!-- 288x400 -->
                     <img class="slider__img" width="288" height="400" src="img/life/study_mob.png" alt="обучение" srcset="img/life/study_mob@2x.png 2x" loading="lazy">
@@ -270,11 +260,9 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/projects_desk.avif 1x, img/avif/life/projects_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/projects_desk.webp 1x, img/webp/life/projects_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/projects_desk.png 1x, img/webp/life/projects_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/life/projects_desk.png 1x, img/life/projects_desk@2x.png 2x">
                     <!-- 576×800 -->
-                    <source type="image/avif" srcset="img/avif/life/projects_mob.avif 1x, img/avif/life/projects_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/projects_mob.webp 1x, img/webp/life/projects_mob@2x.webp 2x">
                     <!-- 288x400 -->
                     <img class="slider__img" width="288" height="400" src="img/life/projects_mob.png" alt="проекты" srcset="img/life/projects_mob@2x.png 2x" loading="lazy">
@@ -284,11 +272,9 @@
                 <div class="swiper-slide slider__item">
                   <picture>
                     <!-- 482x732 -->
-                    <!-- <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/life/leadership_desk.avif 1x, img/avif/life/leadership_desk@2x.avif 2x"> -->
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/life/leadership_desk.webp 1x, img/webp/life/leadership_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/life/leadership_desk.png 1x, img/webp/life/leadership_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/life/leadership_desk.png 1x, img/life/leadership_desk@2x.png 2x">
                     <!-- 576×800 -->
-                    <source type="image/avif" srcset="img/avif/life/leadership_mob.avif 1x, img/avif/life/leadership_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/life/leadership_mob.webp 1x, img/webp/life/leadership_mob@2x.webp 2x">
                     <!-- 288x400 -->
                     <img class="slider__img" width="240" height="320" src="img/life/leadership_mob.png" alt="лидерство" srcset="img/life/leadership_mob@2x.png 2x" loading="lazy">
@@ -353,11 +339,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -408,11 +392,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -463,11 +445,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -518,11 +498,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -573,11 +551,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -628,11 +604,9 @@
               <div class="swiper-slide review">
                 <picture>
                   <!-- 728x960 -->
-                  <source media="(min-width: 1024px)" type="image/avif" srcset="img/avif/reviews/review_desk.avif 1x, img/avif/reviews/review_desk@2x.avif 2x">
                     <source media="(min-width: 1024px)" type="image/webp" srcset="img/webp/reviews/review_desk.webp 1x, img/webp/reviews/review_desk@2x.webp 2x">
-                    <source media="(min-width: 1024px)" type="image/png" srcset="img/webp/reviews/review_desk.png 1x, img/webp/reviews/review_desk@2x.png 2x">
+                    <source media="(min-width: 1024px)" type="image/png" srcset="img/reviews/review_desk.png 1x, img/reviews/review_desk@2x.png 2x">
                     <!-- 480×640 -->
-                    <source type="image/avif" srcset="img/avif/reviews/review_mob.avif 1x, img/avif/reviews/review_mob@2x.avif 2x">
                     <source type="image/webp" srcset="img/webp/reviews/review_mob.webp 1x, img/webp/reviews/review_mob@2x.webp 2x">
                     <!-- 240x320 -->
                     <img class="review__img" width="240" height="320" src="img/reviews/review_mob.png" alt="фотография пользователя" srcset="img/reviews/review_mob@2x.png 2x" loading="lazy">
@@ -700,7 +674,6 @@
           <div class="details__curator-card">
             <picture>
               <!-- 224x224 -->
-              <source type="image/avif" srcset="img/avif/details/details-person_mob.avif 1x, img/avif/details/details-person_mob@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/details/details-person_mob.webp 1x, img/webp/details/details-person_mob@2x.webp 2x">
               <!-- 112x112 -->
               <img class="details__img" width="112" height="112" src="/img/details/details-person_mob.png" alt="куратор" srcset="/img/details/details-person_mob@2x.png 2x" loading="lazy">
@@ -745,14 +718,12 @@
         <div class="map">
           <picture>
             <!-- 1404x896 -->
-            <source type="image/avif" media="(min-width: 1024px)" srcset="img/avif/details/map_desk.avif 1x, img/avif/details/map_desk@2x.avif 2x">
             <source type="image/webp" media="(min-width: 1024px)" srcset="img/webp/details/map_desk.webp 1x, img/webp/details/map_desk@2x.webp 2x">
-            <source type="image/png" media="(min-width: 1024px)" srcset="img/webp/details/map_desk.png 1x, img/webp/details/map_desk@2x.png 2x">
+            <source type="image/png" media="(min-width: 1024px)" srcset="img/details/map_desk.png 1x, img/details/map_desk@2x.png 2x">
             <!-- 640x840 -->
-            <source type="image/avif" srcset="img/avif/details/map_mob.avif 1x, img/avif/details/map_mob@2x.avif 2x">
             <source type="image/webp" srcset="img/webp/details/map_mob.webp 1x, img/webp/details/map_mob@2x.webp 2x">
             <!-- 320x420 -->
-            <img class="map__img" width="320" height="420" src="img/map_mob.png" alt="карта с адресом агентства" srcset="img/map_mob@2x.png 2x" loading="lazy">
+            <img class="map__img" width="320" height="420" src="img/details/map_mob.png" alt="карта с адресом агентства" srcset="img/details/map_mob@2x.png 2x" loading="lazy">
           </picture>
         </div>
       </section>
@@ -788,7 +759,6 @@
           <a href="index.html" class="footer__link">
             <picture>
               <!-- 240x84 -->
-              <source type="image/avif" srcset="img/avif/footer/logo.avif 1x, img/avif/footer/logo@2x.avif 2x">
               <source type="image/webp" srcset="img/webp/footer/logo.webp 1x, img/webp/footer/logo@2x.webp 2x">
               <!-- 120x42 -->
               <img class="logo footer__logo-image" alt="логотип Маса" width="99" height="31" src="img/footer/logo.png" srcset="img/footer/logo@2x.png 2x" loading="lazy">

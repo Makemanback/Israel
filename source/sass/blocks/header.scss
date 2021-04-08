@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  background: radial-gradient(grey, white);
+  background: radial-gradient(#ffaa0e, #ffaa0e), radial-gradient(#ffaa0e, #ffaa0e), radial-gradient(#ffaa0e, #ffaa0e);
   background-image: url("../img/header/girl.png"), url("../img/header/israel.png"), url("../img/header/bg.png");
   background-size: 320px 605px, 347px 122px, cover;
   background-position: center 32px, center 168px, center 32px;
@@ -17,6 +17,12 @@
   @media (min-width: 1367px) {
     background-size: 1366px 906px, 1018px 340px, cover;
   }
+}
+
+.header--modal {
+  position: relative;
+  display: block;
+  z-index: 100;
 }
 
 .header__container {

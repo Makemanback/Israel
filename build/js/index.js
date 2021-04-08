@@ -48,6 +48,7 @@ reviewSlider.init();
 
 // открытие модального окна
 const name = document.querySelector('[name=name]');
+const nameField = document.querySelector('#modal__name');
 const tel = document.querySelector('[name=tel]');
 const phone = document.querySelector('.header__order-call');
 const modal = document.querySelector('.modal');
@@ -57,10 +58,11 @@ const success = document.querySelector('.success');
 const wantBtn = document.querySelector('.want__button');
 const feedBtn = document.querySelector('.feedback__button');
 
-const wantName = document.querySelector('[name=want_tel]');
+const wantTel = document.querySelector('[name=want_tel]');
 const feedbackName = document.querySelector('[name=feedback_name]');
 const feedbackTel = document.querySelector('[name=feedback_tel]');
 
+close.forEach((button) => button.style.display = 'block')
 modal.style.display = 'none';
 
 let isStorageSupport = true;
@@ -69,15 +71,10 @@ let storage = '';
 try {
   storage = localStorage.getItem('name');
   storage = localStorage.getItem('tel');
+  storage = localStorage.getItem('want_tel')
+  // console.log(localStorage.getItem('want_tel'))
 } catch (err) {
   isStorageSupport = false;
-}
-
-
-if (storage) {
-  wantName.value = storage;
-  feedbackName.value = storage;
-  feedbackTel.value = storage;
 }
 
 const closeEscModal = (evt) => {
@@ -146,8 +143,22 @@ const closeSuccess = (evt) => {
   document.addEventListener('click', closeByOverlay);
 }
 
+const nameValidation = () => {
+  const validityStateObject = nameField.validity;
+    if (validityStateObject.valueMissing) {
+      nameField.setCustomValidity('Заполните это поле!');
+    }
+}
+
+nameField.addEventListener('invalid', (evt) => {
+  evt.preventDefault();
+  nameValidation();
+})
+
+
 const sendForm = () => {
-  if (name.value!== '' && tel.value.length === 16 && modalCheckbox.checked) {
+  nameValidation()
+  if (name.value !== '' && tel.value.length === 16 && modalCheckbox.checked) {
     modal.classList.add('visually-hidden');
     success.classList.remove('visually-hidden');
     document.body.style.overflow = 'hidden';
@@ -157,6 +168,7 @@ const sendForm = () => {
 
 const submitForm = (evt) => {
   evt.preventDefault()
+
   sendForm();
 
   if (isStorageSupport) {
@@ -170,8 +182,17 @@ success.addEventListener('click', closeSuccess);
 
 // блок хочу поехать
 const submitFormWant = (evt) => {
+
+  if (isStorageSupport) {
+    console.log(localStorage.getItem('want_tel'))
+    console.log(
+
+      localStorage.setItem('tel', wantTel.value)
+    )
+  }
+
   evt.preventDefault()
-  if (wantName.value.length === 16) {
+  if (wantTel.value.length === 16) {
     window.innerWidth > DESKTOP
       ? success.classList.add('success--translate-desk')
       : success.classList.add('success--translate-mob');
