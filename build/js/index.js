@@ -48,11 +48,9 @@ reviewSlider.init();
 
 // открытие модального окна
 const name = document.querySelector('[name=name]');
-const nameField = document.querySelector('#modal__name');
 const tel = document.querySelector('[name=tel]');
 const phone = document.querySelector('.header__order-call');
 const modal = document.querySelector('.modal');
-const modalCheckbox = document.querySelector('[name=modal_checkbox]');
 const close = document.querySelectorAll('.close');
 const success = document.querySelector('.success');
 const wantBtn = document.querySelector('.want__button');
@@ -164,13 +162,15 @@ const closeSuccess = (evt) => {
 }
 
 const sendForm = () => {
-  if (name.value !== '' && tel.value.length === 16 && modalCheckbox.checked) {
+  if (
+    tel.value.length === 16) {
     modal.classList.add('visually-hidden');
     success.classList.remove('visually-hidden');
     document.body.style.overflow = 'hidden';
     document.removeEventListener('keydown', closeEscModal);
   }
 };
+
 const form = document.querySelector('.modal__form');
 
 const submitForm = (evt) => {
@@ -190,27 +190,12 @@ success.addEventListener('click', closeSuccess);
 // блок хочу поехать
 const wantForm = document.querySelector('.want__form');
 
-const wantTelValidation = () => {
-  const validityStateObject = nameField.validity;
-  if (validityStateObject.valueMissing) {
-    wantTel.setCustomValidity('Заполните это поле!');
-  }
-}
-
-
 const submitFormWant = (evt) => {
-  // console.log(wantTel.value.length)
-  if (wantTel.value.length !== 16) {
-    return wantTelValidation();
-  }
   if (isStorageSupport) {
     localStorage.setItem('want_tel', wantTel.value);
   }
   evt.preventDefault()
   if (wantTel.value.length === 16) {
-    window.innerWidth > DESKTOP
-      ? success.classList.add('success--translate-desk')
-      : success.classList.add('success--translate-mob');
 
     success.classList.remove('visually-hidden');
     document.body.style.overflow = 'hidden';
@@ -221,17 +206,17 @@ const submitFormWant = (evt) => {
 
 wantForm.addEventListener('submit', submitFormWant);
 
+const feedbackForm = document.querySelector('.feedback__form');
+
 // блок обратной связи
 const submitFormFeed = (evt) => {
   evt.preventDefault()
 
-  if (feedbackName.value !== '' && feedbackTel.value.length === 16) {
+  if (feedbackTel.value.length === 16) {
     if (isStorageSupport) {
       localStorage.setItem('feedback_name', feedbackName.value);
       localStorage.setItem('feedback_tel', feedbackTel.value);
     }
-
-    success.classList.add('success--translate-feed');
 
     success.classList.remove('visually-hidden');
     document.body.style.overflow = 'hidden';
@@ -240,7 +225,7 @@ const submitFormFeed = (evt) => {
   }
 }
 
-feedBtn.addEventListener('click', submitFormFeed);
+feedbackForm.addEventListener('submit', submitFormFeed);
 
 // аккордеон в вопросах
 const faqItems = document.querySelectorAll('.faq__item>p');
@@ -333,3 +318,6 @@ const scrollDown = (elem) => {
 }
 
 scroll.addEventListener('click', () => scrollDown(life));
+
+const setSuccessPosition = () => {success.style.top = `${window.pageYOffset}px`};
+document.addEventListener('scroll', setSuccessPosition);

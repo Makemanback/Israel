@@ -80,34 +80,15 @@
       letter-spacing: 0;
       margin: 0;
     }
+  }
 
-    &:nth-of-type(3n),
-    &:last-of-type {
-      letter-spacing: 1px;
-      line-height: 26px;
+  .review__text-wrapper {
+    display: block;
+    grid-row: 3 / 5;
+    grid-column: 1 / -1;
 
-      @media (min-width: $desktop-width) {
-        letter-spacing: 0;
-        line-height: 27px;
-      }
-    }
-
-    &:nth-of-type(3n) {
-      margin-bottom: 15px;
-
-      @media (min-width: $desktop-width) {
-        grid-row: 3 / 4;
-        margin-bottom: 0;
-      }
-    }
-
-    &:last-of-type {
-      margin-bottom: 24px;
-
-      @media (min-width: $desktop-width) {
-        grid-row: 4 / 5;
-        margin-bottom: 0;
-      }
+    p:first-child {
+      margin-bottom: 17px;
     }
   }
 
