@@ -66,13 +66,20 @@ close.forEach((button) => button.style.display = 'block')
 modal.style.display = 'none';
 
 let isStorageSupport = true;
-let storage = '';
+let storageName = '';
+let storageTel = '';
+let storageWantTel = '';
+let storageFeedbackName = '';
+let storageFeedbackTel = '';
+
 
 try {
-  storage = localStorage.getItem('name');
-  storage = localStorage.getItem('tel');
-  storage = localStorage.getItem('want_tel')
-  // console.log(localStorage.getItem('want_tel'))
+  storageName = localStorage.getItem('name');
+  storageTel = localStorage.getItem('tel');
+  storageWantTel = localStorage.getItem('want_tel');
+  storageFeedbackName = localStorage.getItem('feedback_name');
+  storageFeedbackTel = localStorage.getItem('feedback_tel');
+
 } catch (err) {
   isStorageSupport = false;
 }
@@ -104,6 +111,7 @@ const closeByOverlay = (evt) => {
       target !== phone &&
       target !== wantBtn &&
       target !== feedBtn) {
+
     evt.preventDefault();
     document.body.style.overflow = 'visible';
     modal.style.display = 'none';
@@ -119,9 +127,11 @@ const openModal = (evt) => {
   name.focus();
   document.body.style.overflow = 'hidden';
 
-  if (storage) {
-    name.value = storage;
-    tel.value = storage;
+  if (storageName) {
+    name.value = storageName;
+  }
+  if (storageTel) {
+    tel.value = storageTel;
   }
 
   document.addEventListener('keydown', closeEscModal);
@@ -133,31 +143,27 @@ const openModal = (evt) => {
 
 phone.addEventListener('click', openModal);
 
+if (storageWantTel) {
+  wantTel.value = storageWantTel;
+}
+if (storageFeedbackName) {
+  feedbackName.value = storageFeedbackName;
+}
+if (storageFeedbackTel) {
+  feedbackTel.value = storageFeedbackTel;
+}
+
 // отправка формы
-const submitBtn = document.querySelector('.modal__button');
+// const submitBtn = document.querySelector('.modal__button');
 
 const closeSuccess = (evt) => {
-  evt.preventDefault()
+  evt.preventDefault();
   document.body.style.overflow = 'visible';
   document.addEventListener('keydown', closeEscModal);
   document.addEventListener('click', closeByOverlay);
 }
 
-const nameValidation = () => {
-  const validityStateObject = nameField.validity;
-    if (validityStateObject.valueMissing) {
-      nameField.setCustomValidity('Заполните это поле!');
-    }
-}
-
-nameField.addEventListener('invalid', (evt) => {
-  evt.preventDefault();
-  nameValidation();
-})
-
-
 const sendForm = () => {
-  nameValidation()
   if (name.value !== '' && tel.value.length === 16 && modalCheckbox.checked) {
     modal.classList.add('visually-hidden');
     success.classList.remove('visually-hidden');
@@ -165,6 +171,7 @@ const sendForm = () => {
     document.removeEventListener('keydown', closeEscModal);
   }
 };
+const form = document.querySelector('.modal__form');
 
 const submitForm = (evt) => {
   evt.preventDefault()
@@ -177,20 +184,28 @@ const submitForm = (evt) => {
   }
 }
 
-submitBtn.addEventListener('click', submitForm);
+form.addEventListener('submit', submitForm);
 success.addEventListener('click', closeSuccess);
 
 // блок хочу поехать
-const submitFormWant = (evt) => {
+const wantForm = document.querySelector('.want__form');
 
-  if (isStorageSupport) {
-    console.log(localStorage.getItem('want_tel'))
-    console.log(
-
-      localStorage.setItem('tel', wantTel.value)
-    )
+const wantTelValidation = () => {
+  const validityStateObject = nameField.validity;
+  if (validityStateObject.valueMissing) {
+    wantTel.setCustomValidity('Заполните это поле!');
   }
+}
 
+
+const submitFormWant = (evt) => {
+  // console.log(wantTel.value.length)
+  if (wantTel.value.length !== 16) {
+    return wantTelValidation();
+  }
+  if (isStorageSupport) {
+    localStorage.setItem('want_tel', wantTel.value);
+  }
   evt.preventDefault()
   if (wantTel.value.length === 16) {
     window.innerWidth > DESKTOP
@@ -204,13 +219,18 @@ const submitFormWant = (evt) => {
   }
 }
 
-wantBtn.addEventListener('click', submitFormWant);
+wantForm.addEventListener('submit', submitFormWant);
 
 // блок обратной связи
 const submitFormFeed = (evt) => {
   evt.preventDefault()
 
   if (feedbackName.value !== '' && feedbackTel.value.length === 16) {
+    if (isStorageSupport) {
+      localStorage.setItem('feedback_name', feedbackName.value);
+      localStorage.setItem('feedback_tel', feedbackTel.value);
+    }
+
     success.classList.add('success--translate-feed');
 
     success.classList.remove('visually-hidden');
