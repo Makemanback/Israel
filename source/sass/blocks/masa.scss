@@ -1,4 +1,5 @@
 .masa {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,12 +7,23 @@
   margin-bottom: 80px;
 
   @media (min-width: $desktop-width) {
-    background: radial-gradient(purple -100%, white);
     background-image: url("../img/masa/masa_desk.png");
     background-size: 1361px 583px;
     background-position: center 0;
     background-repeat: no-repeat;
     margin-bottom: 0;
+  }
+
+  &::after {
+    position: absolute;
+    background-color: #dba1af;
+    content: "";
+    display: block;
+    width: 1200px;
+    height: 420px;
+    top: 130px;
+    z-index: -1;
+    opacity: 0.2;
   }
 }
 
