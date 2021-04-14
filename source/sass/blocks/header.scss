@@ -42,11 +42,19 @@
     position: absolute;
     background-color: #9d8e87;
     content: "";
-    width: 1100px;
-    height: 500px;
+    width: 90%;
+    height: 300px;
     z-index: -1;
     top: 200px;
     opacity: 0.3;
+    left: 0;
+    right: 0;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: $desktop-width) {
+      height: 500px;
+    }
   }
 }
 

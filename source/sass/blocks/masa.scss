@@ -19,11 +19,21 @@
     background-color: #dba1af;
     content: "";
     display: block;
-    width: 1200px;
-    height: 420px;
-    top: 130px;
+    width: 33%;
+    height: 160px;
+    top: 140px;
     z-index: -1;
-    opacity: 0.2;
+    opacity: 0.3;
+
+    @media (min-width: $desktop-width) {
+      width: 90%;
+      height: 420px;
+      top: 130px;
+      left: 0;
+      right: 0;
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 }
 
